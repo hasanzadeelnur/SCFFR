@@ -1,0 +1,69 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    decimal b = Model.Count();
+    decimal t = b/ 3;
+    decimal a = Math.Ceiling(t);
+}
+@model IEnumerable<HomePage>;
+<div class="images">
+    <div class="row">
+        @for (int i = 1; i <= a; i++)
+        {int k = 1;
+        int f = Model.Skip((i - 1) * 3).Take(3).Count();
+        <div class="col-sm-6 col-md-6 ">
+            <div class="home-images">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="4000">
+                    <ol class="carousel-indicators">
+                        @for (int c = 0; c <= f - 1; c++)
+                        {
+                            string z = "";
+                            if (c == 0)
+                            {
+                                z = "active";
+                            }
+
+                            <li data-target="#carouselExampleIndicators" data-slide-to="@c" class="@Html.Raw(z)"></li>
+                        }
+                    </ol>
+
+                    <div class="carousel-inner">
+
+                        @foreach (var item in Model.Skip((i - 1) * 3).Take(3))
+                        {
+                            string o = "carousel-item";
+                            if (k == 1)
+                            {
+                                o = "carousel-item active";
+                            }
+
+                            <div class="@Html.Raw(o)">
+                                <img class="d-block w-100" src="~/uploads/@item.Photo" alt="Second slide">
+                            </div>
+                            k++;
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+
+
+    </div>
+    </div>
+</div>
+@section Scripts{ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js" integrity="sha512-XKa9Hemdy1Ui3KSGgJdgMyYlUg1gM+QhL6cnlyTe2qzMCYm4nAZ1PsVerQzTTXzonUR+dmswHqgJPuwCq1MaAg==" crossorigin="anonymous"></script>
+@if (TempData["SuccessResponse"]!=null)
+{
+    <script>
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: '',
+            showConfirmButton: false,
+            timer: 1500
+        })
+    </script>
+}
+}

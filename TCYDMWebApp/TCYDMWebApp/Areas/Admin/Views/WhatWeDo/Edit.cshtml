@@ -1,0 +1,39 @@
+﻿@model TCYDMWebApp.DTO.WhatWeDoDTO;
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="right_col" role="main" style="min-height: 1661px;">
+
+    <h4>HomePage</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-12">
+            <form asp-action="Edit" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label class="control-label">LanguageId</label>
+                    <select asp-items="ViewBag.Lang" asp-for="LanguageId" class="form-control">
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Content" class="control-label"></label>
+                    <textarea asp-for="Content"></textarea>
+                    <span asp-validation-for="Content" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <a class="btn btn-outline-secondary" asp-action="homeview">Back</a>
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section javascript{
+
+    <script>
+        CKEDITOR.replace("Content")
+    </script>
+}

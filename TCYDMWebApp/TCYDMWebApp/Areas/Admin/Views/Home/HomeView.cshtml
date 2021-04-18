@@ -1,0 +1,99 @@
+﻿@model IEnumerable<TCYDMWebApp.DTO.HomePage>
+
+@{
+    ViewData["Title"] = "HomeView";
+    int a = 1;
+
+}
+
+<div class="right_col" role="main" style="min-height: 1661px;">
+    <!-- top tiles -->
+    <div class="container">
+        @if (Model.Count() < 12)
+        {
+            <p>
+                <a asp-action="create" class="btn btn-outline-secondary">New</a>
+            </p>
+        }
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>
+                        <span class="badge badge-secondary">
+                            #
+                        </span>
+                    </th>
+                    <th>
+                        <span class="badge badge-secondary">
+                            @Html.DisplayNameFor(model => model.Photo)
+                        </span>
+                    </th>
+                    <th>
+                        <i class="fas fa-wrench"></i>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            <span class="badge badge-secondary">
+                                @Html.DisplayFor(modelItem => item.Id)
+                            </span>
+
+                        </td>
+                        <td>
+                            <img src="~/uploads/@item.Photo" width="150" alt="Alternate Text" />
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id">
+                                <i class="fas fa-pencil-alt"></i>
+                            </a>
+
+                            <a asp-controller="Home" asp-action="Delete" asp-route-id="@item.Id" class="text-danger sweet-delete">
+                                <i class="fas fa-trash"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    if (a%3 == 0)
+                    {
+                        <tr style="border-bottom: 1px solid #000;"></tr>
+                    }
+                    a++;
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section javascript
+{
+<script>
+    $(document).ready(function () {
+        $(".sweet-delete").click(function (event) {
+            event.preventDefault();
+            var sweet = $(this);
+            swal({
+                title: "Eminsiniz?",
+                text: "Melumatlariniz Silinecek",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            }).then((willDelete) => {
+                if (willDelete) {
+                    $.get($(this).attr('href'), function (response) {
+                        swal("Poof! Your imaginary file has been deleted!", {
+                            icon: "success",
+                        }).then(function () {
+                            window.location.reload();
+                        });
+                    });
+                } else {
+                    swal("Xeta bash verdi!");
+                }
+            });
+        });
+    });
+</script>
+}

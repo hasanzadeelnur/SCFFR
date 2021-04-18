@@ -1,0 +1,17 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List<TCYDMWebApp.DTO.OurServicesDTO>
+@if (Model.Count == 0)
+{
+    return;
+}
+else
+{
+@foreach (var item in Model)
+{
+    <li><a style="text-transform:capitalize" href="/home/services/@item?.ServiceId">* @item?.Name</a></li>
+}
+}

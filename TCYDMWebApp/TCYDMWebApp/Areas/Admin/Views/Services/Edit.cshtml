@@ -1,0 +1,133 @@
+﻿@model TCYDMWebApp.Areas.Admin.Models.AddServices
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="right_col" role="main" style="min-height: 1661px;">
+    <hr />
+    <div class="row">
+        <div class="col-md-12">
+            <form action="/Admin/Services/Edit" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div id="oldserviceslist" class="form-group">
+                    <label asp-for="ServiceId" class="control-label"></label>
+                    <select id="serviceselect" asp-items="ViewBag.Services" asp-for="ServiceId" class="form-control">
+                    </select>
+                    <span asp-validation-for="ServiceId" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="NeedsPayment" class="control-label"></label>
+                    <select asp-for="NeedsPayment" class="form-control">
+                        <option disabled selected>Select</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                    <span asp-validation-for="NeedsPayment" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="IsLocal" class="control-label"></label>
+                    <select asp-for="IsLocal" class="form-control">
+                        <option disabled selected>Select</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                    <span asp-validation-for="IsLocal" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Language</label>
+                    <select readonly asp-items="ViewBag.Lang" asp-for="LanguageId" class="form-control"> </select>
+                    <span asp-validation-for="LanguageId" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Input</label>
+                    <table id="table">
+
+                        <tr id="table-title">
+                            <td>Input Type</td>
+                            <td>Place Holder</td>
+                        </tr>
+
+                        @if (Model.ServiceAdditions.Count > 0)
+                        {
+                            int a = 1;
+                            @foreach (var item in Model.ServiceAdditions)
+                            {
+                                <tr class="add222">
+                                    <td><input name="ServiceAdditions.Index" type="hidden" value="@a" /></td>
+                                    <td> <select name="ServiceAdditions[@a].InputId" asp-for="@item.InputId" id="weight-1" class="form-control"> <option value="1">Text type</option> <option value="2">Number type</option> <option value="3">File type</option> </select></td>
+                                    <td><input name="ServiceAdditions[@a].PlaceHolder" asp-for="@item.PlaceHolder" id="mark-1" class="form-control" type="text" maxlength="50"></td>
+                                </tr>
+                                a++;
+                            }
+                        }
+
+
+                    </table>
+                    <div id="button-div">
+                        <input id="calc-button" type="button" value="Add Input" onclick="calculator()">
+                    </div>
+                    <div id="outputDiv"></div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Info" class="control-label"></label>
+                    <textarea asp-for="Info"></textarea>
+                    <span asp-validation-for="Info" class="text-danger"></span>
+                </div>
+                <div class="form-group text-center">
+                    <a class="btn btn-outline-secondary" asp-action="OnlineQuery">Back</a>
+                    <input type="submit" value="Create" class="btn btn-secondary" />
+                </div>
+            </form>
+
+
+
+        </div>
+    </div>
+</div>
+
+@section javascript{
+
+    <script>
+        CKEDITOR.replace("Info");
+        $(document).ready(function () {
+            $("#oldserviceslist").hide();
+            $("#serviceselect").prop("disabled", true);
+        });
+
+        function calculator() {
+            var weight = 0;
+            var mark = 0;
+            var weights = document.querySelectorAll('[id^=weight-]');
+            var grades = document.querySelectorAll('[id^=mark-]');
+            var trs = document.getElementsByClassName('add222');
+            var tBody = document.getElementsByTagName('tbody')[0];
+            var totalWeight = 0;
+            var totalGrade = 0;
+
+            for (var i = 0; i < weights.length; i++) {
+                totalWeight += +weights[i].value;
+                weight += + grades[i].value;
+            }
+            for (var i = 0; i < grades.length; i++) {
+                totalGrade += +grades[i].value;
+                weight += + grades[i].value;
+            }
+
+
+            var finalGrade = totalGrade / totalWeight;
+            var display = document.getElementById('outputDiv');
+            var newTr = document.createElement('TR');
+            newTr.classList.add('add222')
+            newTr.innerHTML = `<td><input name="ServiceAdditions.Index" type="hidden"  value="${(trs.length + 1)}" /></td> <td> <select name="ServiceAdditions[${(trs.length + 1)}].InputId" id="weight-1" class="form-control"> <option value="1">Text type</option> <option value="2">Number type</option> <option value="3">File type</option> </select></td > <td><input name="ServiceAdditions[${(trs.length + 1)}].PlaceHolder" id="mark-1" class="form-control" type="text" maxlength="50" ></td>`
+            tBody.appendChild(newTr);
+        }
+    </script>
+}

@@ -1,0 +1,34 @@
+﻿@model TCYDMWebApp.DTO.ServiceInfo
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="right_col" role="main" style="min-height: 1661px;">
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input class="control-label" disabled value="@Html.DisplayFor(u => Model.Name)"/>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Info" class="control-label"></label>
+                    <textarea class="control-label" disabled>@Html.DisplayFor(u => Model.Info)</textarea>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ServiceId" class="control-label"></label>
+                    <input class="control-label"disabled value="@Html.DisplayFor(u => Model.ServiceId)"/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Language</label>
+                    <select disabled asp-items="ViewBag.Lang" asp-for="LanguageId" class="form-control"> </select>
+                </div>
+        </div>
+    </div>
+
+    <div>
+        <a class="btn btn-outline-secondary" asp-action="Index">Back</a>
+    </div>
+</div>
