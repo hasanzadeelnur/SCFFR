@@ -23,7 +23,8 @@
                                         <p>
                                             <a asp-area="Admin" asp-controller="Services" asp-action="Create" class="btn btn-outline-secondary">New</a>
                                         </p>
-                                        <table id="demo" class="table table-striped table-bordered dataTable no-footer" role ="grid" aria-describedby="datatable_info">
+                                        <p>@TempData["ErrorMessage"]</p>
+                                        <table id="demo" class="table table-striped table-bordered dataTable no-footer" role="grid" aria-describedby="datatable_info">
                                             <thead>
                                                 <tr role="row">
                                                     <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 156px;">@Html.DisplayNameFor(model => model.Id)</th>
@@ -83,31 +84,25 @@
 @section javascript
 {
     <script>
-    $(document).ready(function () {
-        $(".sweet-delete").click(function (event) {
-            event.preventDefault();
-            var sweet = $(this);
-            swal({
-                title: "Eminsiniz?",
-                text: "Melumatlariniz Silinecek",
-                icon: "warning",
-                buttons: true,
-                dangerMode: true,
-            }).then((willDelete) => {
-                if (willDelete) {
-                    $.get($(this).attr('href'), function (response) {
-                        swal("Poof! Your imaginary file has been deleted!", {
-                            icon: "success",
-                        }).then(function () {
-                            window.location.reload();
-                        });
-                    });
-                } else {
-                    swal("Xeta bash verdi!");
-                }
+        $(document).ready(function () {
+            $(".sweet-delete").click(function (event) {
+                event.preventDefault();
+                var sweet = $(this);
+                swal({
+                    title: "Eminsiniz?",
+                    text: "Melumatlariniz Silinecek",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                }).then((willDelete) => {
+                    if (willDelete) {
+                        window.location = $(this).attr('href');
+                    } else {
+                        swal("Hata!");
+                    }
+                });
             });
         });
-    });
 
         var filtersConfig = {
             // instruct TableFilter location to import ressources from

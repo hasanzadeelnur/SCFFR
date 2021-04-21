@@ -49,7 +49,7 @@ namespace TCYDMWebApp.Controllers
         public IActionResult ServiceInfo(int serviceId)
         {
             #region ServiceData
-                        int langId = 1;
+                        int langId = 3;
 
                         if (Request.Cookies["LangKey"] != null)
                         {
@@ -81,7 +81,7 @@ namespace TCYDMWebApp.Controllers
         public IActionResult WhatWeDo()
         {
             #region ServiceData
-            int langId = 1;
+            int langId = 3;
 
             if (Request.Cookies["LangKey"] != null)
             {
@@ -99,7 +99,7 @@ namespace TCYDMWebApp.Controllers
         public IActionResult WhoWeAre()
         {
             #region ServiceData
-            int langId = 1;
+            int langId = 3;
 
             if (Request.Cookies["LangKey"] != null)
             {
@@ -113,11 +113,28 @@ namespace TCYDMWebApp.Controllers
             return View(model);
         }
 
+        public IActionResult OurVision()
+        {
+            #region ServiceData
+            int langId = 3;
+
+            if (Request.Cookies["LangKey"] != null)
+            {
+                langId = Convert.ToInt32(Request.Cookies["LangKey"]);
+            }
+
+            VMVDTO model = new ServiceNode<object, VMVDTO>(_fc)
+                   .GetClient("/api/v1/vision/getbylang/" + langId).Data;
+
+            #endregion
+            return View(model);
+        }
+
         [HttpGet]
         public IActionResult ContactUs()
         {
             #region ServiceData
-            int langId = 1;
+            int langId = 3;
 
             if (Request.Cookies["LangKey"] != null)
             {

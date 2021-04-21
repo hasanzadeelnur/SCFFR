@@ -17,9 +17,7 @@
     <div class="info-service">
         <div class="text">
             <h4>@Model?.ServiceInfo?.Name</h4>
-            <p>
-                @Model?.ServiceInfo?.Info
-            </p>
+                @Html.Raw(@Model?.ServiceInfo?.Info)
 
         </div>
     </div>

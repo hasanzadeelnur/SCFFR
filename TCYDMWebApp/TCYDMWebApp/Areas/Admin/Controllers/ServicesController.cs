@@ -67,10 +67,6 @@ namespace TCYDMWebApp.Areas.Admin.Controllers
                 Text = x.langluageName,
                 Value = x.id.ToString()
             });
-            if (!ModelState.IsValid)
-            {
-                return View(request);
-            }
             if (request.ServiceAdditions==null || request.ServiceAdditions.Count>0)
             {
                 request.NeedsAdittion = 1;
@@ -82,12 +78,19 @@ namespace TCYDMWebApp.Areas.Admin.Controllers
             {
                 Text = x.Name,
                 Value = x.ServiceId.ToString()
-            });
-            if (ModelState.IsValid)
+            }); 
+            if (!ModelState.IsValid)
             {
-                ReturnMessage<object> response = new ServiceNode<AddServices, object>(_localizer, _fc).PostClient(request, "/api/v1/serviceinfo/add");
-                return RedirectToAction("index");
+                return View(request);
             }
+                ReturnMessage<object> response = new ServiceNode<AddServices, object>(_localizer, _fc).PostClient(request, "/api/v1/serviceinfo/add");
+            if(response.Code!=200)
+            {
+                ViewBag.Error = response.Message;
+                return View(request);
+            }
+                return RedirectToAction("index");
+
             return View(request);
         }
         [HttpGet]

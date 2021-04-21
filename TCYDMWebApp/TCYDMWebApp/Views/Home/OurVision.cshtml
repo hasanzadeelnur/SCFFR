@@ -1,0 +1,25 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model TCYDMWebApp.DTO.VMVDTO
+
+@using Microsoft.AspNetCore.Mvc.Localization
+@using TCYDMWebApp.Repositories.Lang
+
+@inject IHtmlLocalizer<SharedResource> SharedLocalizer
+<div class="contact">
+    <h4 style="color:#212529">@SharedLocalizer["Our Vision"]</h4>
+    <div class="contact-text">
+        @Html.Raw(Model?.Vision)
+    </div>
+    <h4 style="color:#212529">@SharedLocalizer["Our Mission"]</h4>
+    <div class="contact-text">
+        @Html.Raw(Model?.Mission)
+    </div>
+    <h4 style="color:#212529">@SharedLocalizer["Our Values"]</h4>
+    <div class="contact-text">
+        @Html.Raw(Model?.Values)
+    </div>
+</div>

@@ -19,7 +19,11 @@
                     <label asp-for="Content" class="control-label"></label>
                     <textarea asp-for="Content"></textarea>
                     <span asp-validation-for="Content" class="text-danger"></span>
+                </div>       
+                <div class="form-group">
+                    <span class="text-danger">@ViewBag.Error</span>
                 </div>
+
                 <div class="form-group text-center">
                     <a class="btn btn-outline-secondary" asp-action="homeview">Back</a>
                     <input type="submit" value="Create" class="btn btn-secondary" />

@@ -57,8 +57,18 @@ let btn_ourServicesMobile = document.querySelector("#btn-our-services-mobile");
 let btn_ourServicesMenuMobile = document.querySelector("#our-services-menu-mobile");
 let icon_ourServicesAngle = document.querySelector("#btn-our-services-mobile>i");
 
+let btn_aboutUsMobile = document.querySelector("#btn-about-us-mobile");
+let btn_aboutUsMenuMobile = document.querySelector("#about-us-menu-mobile");
+let icon_aboutUsAngle = document.querySelector("#btn-about-us-mobile>i");
+
 btn_ourServicesMobile.addEventListener("click",(e)=>{
     e.preventDefault();
     btn_ourServicesMenuMobile.classList.toggle("d-block");
     icon_ourServicesAngle.classList.toggle("fa-angle-up");
+})
+
+btn_aboutUsMobile.addEventListener("click", (e) => {
+    e.preventDefault();
+    btn_aboutUsMenuMobile.classList.toggle("d-block");
+    icon_aboutUsAngle.classList.toggle("fa-angle-up");
 })

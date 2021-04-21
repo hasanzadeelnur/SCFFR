@@ -409,6 +409,29 @@ namespace TCYDMWebServices.Migrations
                     b.ToTable("users");
                 });
 
+            modelBuilder.Entity("TCYDMWebServices.Models.VisionMissionValues", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<int>("LangId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Mission")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("Values")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("Vision")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("visionmissionvalues");
+                });
+
             modelBuilder.Entity("TCYDMWebServices.Models.WhatWeDo", b =>
                 {
                     b.Property<int>("Id")

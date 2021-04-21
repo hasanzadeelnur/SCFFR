@@ -158,11 +158,6 @@ namespace TCYDMWebServices.Controllers.V1
                 {
                     return StatusCode(400, new ReturnErrorMessage((int)ErrorTypes.Errors.NotFound, message: "NotFound"));
                 }
-                bool langluagename = _db.serviceinfos.Any(t => t.LanguageId == request.LanguageId && t.Name == request.Name);
-                if (langluagename)
-                {
-                    return StatusCode(400, new ReturnErrorMessage((int)ErrorTypes.Errors.AlreadyExists, message: "AlreadyExists"));
-                }
                 Service service = _db.services.Include(t => t.ServiceAdditions).FirstOrDefault(t => t.ServiceId == request.ServiceId && t.LanguageId == request.LanguageId);
                 if (service == null)
                 {

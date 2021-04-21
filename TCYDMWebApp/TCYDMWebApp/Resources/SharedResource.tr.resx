@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About us" xml:space="preserve">
+    <value>Hakkımızda</value>
+  </data>
+  <data name="Adress" xml:space="preserve">
+    <value>Adres</value>
+  </data>
+  <data name="All rights reserved" xml:space="preserve">
+    <value>Tüm hakları saklıdır</value>
+  </data>
+  <data name="Cannot find this type of data" xml:space="preserve">
+    <value>Bu tür veriler bulunamıyor</value>
+  </data>
+  <data name="Change Password" xml:space="preserve">
+    <value>Şifre değiştir</value>
+  </data>
+  <data name="Change Profile" xml:space="preserve">
+    <value>Profili değiştir</value>
+  </data>
+  <data name="Comment" xml:space="preserve">
+    <value>Yorumlar</value>
+  </data>
+  <data name="Confirm Password" xml:space="preserve">
+    <value>Şifreyi Onayla</value>
+  </data>
+  <data name="Confirmation needed" xml:space="preserve">
+    <value>Onay gerekli</value>
+  </data>
+  <data name="Contact us" xml:space="preserve">
+    <value>Bize Ulaşın</value>
+  </data>
+  <data name="Country is required" xml:space="preserve">
+    <value>Ülke gerekli</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Email is required" xml:space="preserve">
+    <value>Email gereklidir</value>
+  </data>
+  <data name="Email must be a valid email" xml:space="preserve">
+    <value>E-posta, geçerli bir e-posta olmalıdır</value>
+  </data>
+  <data name="Email or Phone number max length must be 100" xml:space="preserve">
+    <value>E-posta veya Telefon numarası maksimum uzunluk 100 olmalıdır</value>
+  </data>
+  <data name="Email sended" xml:space="preserve">
+    <value>E-posta gönderildi</value>
+  </data>
+  <data name="Forgot Password" xml:space="preserve">
+    <value>Parolanızı mı unuttunuz</value>
+  </data>
+  <data name="Gender is required" xml:space="preserve">
+    <value>Gender is required</value>
+  </data>
+  <data name="Get Turn" xml:space="preserve">
+    <value>Dönüş Alın</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Oturum aç</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Çıkış Yap</value>
+  </data>
+  <data name="Max lenght is 256" xml:space="preserve">
+    <value>Maksimum uzunluk 256'dır</value>
+  </data>
+  <data name="Max lenght limit is 200" xml:space="preserve">
+    <value>Maksimum uzunluk sınırı 200'dür</value>
+  </data>
+  <data name="Minimum password lenght must be 6 characters" xml:space="preserve">
+    <value>Minimum şifre uzunluğu 6 karakter olmalıdır</value>
+  </data>
+  <data name="Mobile" xml:space="preserve">
+    <value>Cep Telefonu</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>İsim</value>
+  </data>
+  <data name="Name is required" xml:space="preserve">
+    <value>İsim gerekli</value>
+  </data>
+  <data name="Online query" xml:space="preserve">
+    <value>Çevrimiçi sorgu</value>
+  </data>
+  <data name="Our Mission" xml:space="preserve">
+    <value>Misyonumuz</value>
+  </data>
+  <data name="Our Services" xml:space="preserve">
+    <value>Hizmetlerimiz</value>
+  </data>
+  <data name="Our Values" xml:space="preserve">
+    <value>Değerlerimiz</value>
+  </data>
+  <data name="Our Vision" xml:space="preserve">
+    <value>Vizyonumuz</value>
+  </data>
+  <data name="Page is not found" xml:space="preserve">
+    <value>Sayfa bulunamadı</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Şifre</value>
+  </data>
+  <data name="Password is required" xml:space="preserve">
+    <value>Password is required</value>
+  </data>
+  <data name="Password is wrong" xml:space="preserve">
+    <value>Şifre yanlış</value>
+  </data>
+  <data name="Passwords are not match" xml:space="preserve">
+    <value>Parolalar eşleşmiyor</value>
+  </data>
+  <data name="Personal ID" xml:space="preserve">
+    <value>Kimlik Numarası</value>
+  </data>
+  <data name="Personal Info" xml:space="preserve">
+    <value>Kişisel bilgi</value>
+  </data>
+  <data name="Phone number" xml:space="preserve">
+    <value>Telefon numarası</value>
+  </data>
+  <data name="Phone number is required" xml:space="preserve">
+    <value>Telefon numarası gerekli</value>
+  </data>
+  <data name="Phone number must be a valid number" xml:space="preserve">
+    <value>Telefon numarası geçerli bir numara olmalıdır</value>
+  </data>
+  <data name="Please confirm your email adress" xml:space="preserve">
+    <value>Lütfen e-posta adresinizi doğrulayın</value>
+  </data>
+  <data name="Please select required files" xml:space="preserve">
+    <value>Lütfen gerekli dosyaları seçin</value>
+  </data>
+  <data name="Please select service" xml:space="preserve">
+    <value>Lütfen hizmet seçin</value>
+  </data>
+  <data name="Please select service attend date" xml:space="preserve">
+    <value>Lütfen hizmete katılım tarihini seçin</value>
+  </data>
+  <data name="Please select service attend time" xml:space="preserve">
+    <value>Lütfen servis katılım zamanını seçin</value>
+  </data>
+  <data name="Please select valid hour" xml:space="preserve">
+    <value>Lütfen geçerli bir saat seçin</value>
+  </data>
+  <data name="Please send all required files, because if files not send operation will be not succeeded." xml:space="preserve">
+    <value>Lütfen gerekli tüm dosyaları gönderin, çünkü dosyalar gönderilmezse işlem başarılı olmayacaktır.</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Profil</value>
+  </data>
+  <data name="Real estate services" xml:space="preserve">
+    <value>Gayrimenkul hizmetleri</value>
+  </data>
+  <data name="Region is required" xml:space="preserve">
+    <value>Bölge gerekli</value>
+  </data>
+  <data name="Registrate" xml:space="preserve">
+    <value>Kayıt ol</value>
+  </data>
+  <data name="Registration" xml:space="preserve">
+    <value>Kayıt</value>
+  </data>
+  <data name="Remember me" xml:space="preserve">
+    <value>Beni hatırla</value>
+  </data>
+  <data name="Restore" xml:space="preserve">
+    <value>Yenile</value>
+  </data>
+  <data name="Restore Password" xml:space="preserve">
+    <value>Parola Yenile</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Kayıt etmek</value>
+  </data>
+  <data name="Select birth year" xml:space="preserve">
+    <value>Doğum yılını seçin</value>
+  </data>
+  <data name="Select Country" xml:space="preserve">
+    <value>Ülke Seçiniz</value>
+  </data>
+  <data name="Select Date" xml:space="preserve">
+    <value>Tarih seç</value>
+  </data>
+  <data name="Select Gender" xml:space="preserve">
+    <value>Cinsiyet seç</value>
+  </data>
+  <data name="Select Region" xml:space="preserve">
+    <value>Bölge Seç</value>
+  </data>
+  <data name="Select Service" xml:space="preserve">
+    <value>Hizmet Seçiniz</value>
+  </data>
+  <data name="Select Time" xml:space="preserve">
+    <value>Saati Seçin</value>
+  </data>
+  <data name="Service" xml:space="preserve">
+    <value>Hizmet</value>
+  </data>
+  <data name="Sign in" xml:space="preserve">
+    <value>Oturum Aç</value>
+  </data>
+  <data name="Support to the Republic of Turkey Foreign Center" xml:space="preserve">
+    <value>Türkiye Cumhuriyeti Dış Merkezine Destek</value>
+  </data>
+  <data name="Surname" xml:space="preserve">
+    <value>Soyadı</value>
+  </data>
+  <data name="Surname is required" xml:space="preserve">
+    <value>Soyadı gerekli</value>
+  </data>
+  <data name="There is no such user with this credentials" xml:space="preserve">
+    <value>Bu kimlik bilgilerine sahip böyle bir kullanıcı yok</value>
+  </data>
+  <data name="There is problem with server, please try again" xml:space="preserve">
+    <value>Sunucuda sorun var, lütfen tekrar deneyin</value>
+  </data>
+  <data name="There is problem with server, try again later" xml:space="preserve">
+    <value>Sunucuda sorun var, daha sonra tekrar deneyin</value>
+  </data>
+  <data name="This credentials are already exists, please try another one" xml:space="preserve">
+    <value>Bu kimlik bilgileri zaten mevcut, lütfen başka bir tane deneyin</value>
+  </data>
+  <data name="This field is required." xml:space="preserve">
+    <value>Bu alan gereklidir.</value>
+  </data>
+  <data name="This time has taken by other user, please change time or date" xml:space="preserve">
+    <value>Bu süre başka bir kullanıcı tarafından alındı, lütfen saati veya tarihi değiştirin</value>
+  </data>
+  <data name="Understood" xml:space="preserve">
+    <value>Anladım</value>
+  </data>
+  <data name="WE OPERATE 24/7" xml:space="preserve">
+    <value>МЫ РАБОТАЕМ 24/7</value>
+  </data>
+  <data name="We send confirmation email to your email adress, please confirm it is actually your email.After confirmation you can access your account" xml:space="preserve">
+    <value>E-posta adresinize onay e-postası gönderiyoruz, lütfen bunun aslında sizin e-postanız olduğunu onaylayın Onaylandıktan sonra hesabınıza erişebilirsiniz.</value>
+  </data>
+  <data name="We send password restore link to your email, please check your email adress" xml:space="preserve">
+    <value>E-postanıza şifre geri yükleme bağlantısı gönderiyoruz, lütfen e-posta adresinizi kontrol edin</value>
+  </data>
+  <data name="What We Do" xml:space="preserve">
+    <value>Ne Yapıyoruz</value>
+  </data>
+  <data name="WHO WE ARE" xml:space="preserve">
+    <value>Biz Kimiz</value>
+  </data>
+  <data name="Wrong credentials" xml:space="preserve">
+    <value>Yanlış kimlik bilgileri</value>
+  </data>
+  <data name="Year of birth is required" xml:space="preserve">
+    <value>Doğum yılı gerekli</value>
+  </data>
+  <data name="You have already unfinished query. Please wait until it will be finished. You will receive email when query finish" xml:space="preserve">
+    <value>Zaten bitirmemiş sorgunuz var. Lütfen bitene kadar bekleyin. Sorgu bittiğinde e-posta alacaksınız</value>
+  </data>
+  <data name="You must type Email or Password" xml:space="preserve">
+    <value>E-posta veya Parola yazmalısınız</value>
+  </data>
+  <data name="Your Email or Phone number" xml:space="preserve">
+    <value>E-posta adresiniz veya Telefon numaranız</value>
+  </data>
+  <data name="Your Password Successfully Changed" xml:space="preserve">
+    <value>Şifreniz Başarıyla Değiştirildi</value>
+  </data>
+</root>

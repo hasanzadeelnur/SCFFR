@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Bw7w4gYewNdi7ey/dIBsNkyhcdsKXtrngFyuqMC3SSfmFktda88djznjhCER07WB5yZY8FkI/xS1Xfv1tT5SqQ==",
+  "dgSpecHash": "IE2lePwx1CcuKHT+AWipQHnEteqXTHP34OatAKEEjocaG9GxpkUjhJayAKP/pYR0AHnvShiGrjJx7nY77NBrzA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hasan\\Desktop\\New folder (2)\\TCYDMPROJ\\TCYDMWebApp\\TCYDMWebApp\\TCYDMWebApp.csproj",
+  "projectFilePath": "C:\\Users\\hasan\\Desktop\\New folder (2)\\SCFFR\\TCYDMWebApp\\TCYDMWebApp\\TCYDMWebApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hasan\\.nuget\\packages\\mailkit\\2.10.1\\mailkit.2.10.1.nupkg.sha512",
     "C:\\Users\\hasan\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",

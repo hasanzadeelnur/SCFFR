@@ -23,6 +23,7 @@
                                         <p>
                                             <a asp-area="Admin" asp-controller="ContactUs" asp-action="Create" class="btn btn-outline-secondary">New</a>
                                         </p>
+                                        <p>@TempData["Error"]</p>
                                         <table id="demo">
                                             <thead>
                                                 <tr role="row">
@@ -38,35 +39,35 @@
                                             <tbody>
                                                 @foreach (var item in Model)
                                                 {
-                                                <tr role="row" class="odd">
-                                                    <td>
-                                                        @Html.DisplayFor(modelItem => item.Id)
-                                                    </td>
-                                                    <td>
-                                                        @Html.DisplayFor(modelItem => item.Adress)
-                                                    </td>
-                                                    <td>
-                                                        @Html.DisplayFor(modelItem => item.Content)
-                                                    </td>
-                                                    <td>
-                                                        @Html.DisplayFor(modelItem => item.Email)
-                                                    </td>
-                                                    <td>
-                                                        @Html.DisplayFor(modelItem => item.Phone)
-                                                    </td>
-                                                    <td>
-                                                        @Html.DisplayFor(modelItem => item.Language)
-                                                    </td>
-                                                    <td>
-                                                        <a asp-action="Edit" asp-route-id="@item.Id">
-                                                            <i class="fas fa-pencil-alt"></i>
-                                                        </a>
+                                                    <tr role="row" class="odd">
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Id)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Adress)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Content)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Email)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Phone)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Language)
+                                                        </td>
+                                                        <td>
+                                                            <a asp-action="Edit" asp-route-id="@item.Id">
+                                                                <i class="fas fa-pencil-alt"></i>
+                                                            </a>
 
-                                                        <a asp-controller="ContactUs" asp-action="Delete" asp-route-id="@item.Id" class="text-danger sweet-delete">
-                                                            <i class="fas fa-trash"></i>
-                                                        </a>
-                                                    </td>
-                                                </tr>
+                                                            <a asp-controller="ContactUs" asp-action="Delete" asp-route-id="@item.Id" class="text-danger sweet-delete">
+                                                                <i class="fas fa-trash"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
                                                 }
 
                                             </tbody>
@@ -86,31 +87,25 @@
 @section javascript
 {
     <script>
-    $(document).ready(function () {
-        $(".sweet-delete").click(function (event) {
-            event.preventDefault();
-            var sweet = $(this);
-            swal({
-                title: "Eminsiniz?",
-                text: "Melumatlariniz Silinecek",
-                icon: "warning",
-                buttons: true,
-                dangerMode: true,
-            }).then((willDelete) => {
-                if (willDelete) {
-                    $.get($(this).attr('href'), function (response) {
-                        swal("Poof! Your imaginary file has been deleted!", {
-                            icon: "success",
-                        }).then(function () {
-                            window.location.reload();
-                        });
-                    });
-                } else {
-                    swal("Xeta bash verdi!");
-                }
+        $(document).ready(function () {
+            $(".sweet-delete").click(function (event) {
+                event.preventDefault();
+                var sweet = $(this);
+                swal({
+                    title: "Eminsiniz?",
+                    text: "Melumatlariniz Silinecek",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                }).then((willDelete) => {
+                    if (willDelete) {
+                        window.location = $(this).attr('href');
+                    } else {
+                        swal("Hata!");
+                    }
+                });
             });
         });
-    });
         var filtersConfig = {
             // instruct TableFilter location to import ressources from
             base_path: 'https://unpkg.com/tablefilter@latest/dist/tablefilter/',

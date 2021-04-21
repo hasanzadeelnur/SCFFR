@@ -4,9 +4,18 @@
         {
             <option selected value="1">en</option>
             <option value="2">ru</option>
+            <option value="3">tr</option>
         }
         else
         {
+            if (@Context.Request.Cookies["LangKey"] == "3")
+            {
+                <option selected value="3">tr</option>
+            }
+            else
+            {
+                <option value="3">tr</option>
+            }
             if (@Context.Request.Cookies["LangKey"] == "2")
             {
                 <option selected value="2">ru</option>

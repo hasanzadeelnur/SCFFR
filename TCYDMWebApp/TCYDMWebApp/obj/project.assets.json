@@ -8350,11 +8350,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hasan\\Desktop\\New folder (2)\\TCYDMPROJ\\TCYDMWebApp\\TCYDMWebApp\\TCYDMWebApp.csproj",
+      "projectUniqueName": "C:\\Users\\hasan\\Desktop\\New folder (2)\\SCFFR\\TCYDMWebApp\\TCYDMWebApp\\TCYDMWebApp.csproj",
       "projectName": "TCYDMWebApp",
-      "projectPath": "C:\\Users\\hasan\\Desktop\\New folder (2)\\TCYDMPROJ\\TCYDMWebApp\\TCYDMWebApp\\TCYDMWebApp.csproj",
+      "projectPath": "C:\\Users\\hasan\\Desktop\\New folder (2)\\SCFFR\\TCYDMWebApp\\TCYDMWebApp\\TCYDMWebApp.csproj",
       "packagesPath": "C:\\Users\\hasan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hasan\\Desktop\\New folder (2)\\TCYDMPROJ\\TCYDMWebApp\\TCYDMWebApp\\obj\\",
+      "outputPath": "C:\\Users\\hasan\\Desktop\\New folder (2)\\SCFFR\\TCYDMWebApp\\TCYDMWebApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

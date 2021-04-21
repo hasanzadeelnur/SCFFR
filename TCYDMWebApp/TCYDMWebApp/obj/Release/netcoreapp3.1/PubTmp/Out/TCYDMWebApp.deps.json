@@ -317,6 +317,9 @@
           },
           "fr/TCYDMWebApp.resources.dll": {
             "locale": "fr"
+          },
+          "tr/TCYDMWebApp.resources.dll": {
+            "locale": "tr"
           }
         },
         "compile": {

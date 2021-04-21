@@ -74,24 +74,37 @@ namespace TCYDMWebServices.Controllers.V1
         [HttpDelete("OurServicesDelete/{id}/{lang}")]
         public IActionResult OurServicesDelete(int id,int lang)
         {
+            Service data = _db.services.Include(t => t.ServiceAdditions).FirstOrDefault(t => t.ServiceId == id && t.LanguageId == lang);
+            bool query = _db.onlinequeries.Any(t => t.ServiceId == data.Id);
+            if (query)
+            {
+                return StatusCode(400, new ReturnErrorMessage((int)ErrorTypes.Errors.NotFound, message: "NotFound"));
+            }
             bool datafound = _db.services.Any(t => t.ServiceId == id&& t.LanguageId == lang);
             if (!datafound)
             {
                 return StatusCode(400, new ReturnErrorMessage((int)ErrorTypes.Errors.NotFound, message: "NotFound"));
             }
-            Service data = _db.services.FirstOrDefault(t => t.ServiceId == id && t.LanguageId == lang);
-            OurServicesDTO dto = new OurServicesDTO
+
+            try
             {
-                Id = data.Id,
-                Name = data.Name,
-                LanguageId = data.LanguageId
-            };
-            bool request = _wwd.Delete(dto);
-            if (request)
-            {
-                return Ok(new ReturnMessage(200, message: "Success"));
+                if(data.ServiceAdditions.Count>0)
+                {
+                    foreach (var item in data.ServiceAdditions)
+                    {
+                        _db.serviceadditions.Remove(item);
+
+                    }
+                    _db.SaveChanges();
+                }
+                _db.services.Remove(data);
+                _db.SaveChanges();
+                return Ok(new ReturnMessage());
             }
-            return StatusCode(500, new ReturnErrorMessage((int)ErrorTypes.Errors.Internal, message: "Internal server error"));
+            catch (Exception x )
+            {
+                return BadRequest(new ReturnErrorMessage((int)ErrorTypes.Errors.Internal, x.Message));
+            }
         }
 
         [HttpPut("OurServicesUpdate")]

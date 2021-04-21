@@ -30,6 +30,7 @@ namespace TCYDMWebServices.Data
         public DbSet<ServiceAdditionText> serviceadditiontext { get; set; }
         public DbSet<ServiceAdditionNumber> serviceadditionnumber { get; set; }
         public DbSet<ServiceAdditionFile> serviceadditionfile { get; set; }
+        public DbSet<VisionMissionValues> visionmissionvalues { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

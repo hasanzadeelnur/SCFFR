@@ -1,0 +1,53 @@
+﻿@model TCYDMWebApp.DTO.VMVDTO
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="right_col" role="main" style="min-height: 1661px;">
+    <hr />
+    <div class="row">
+        <div class="col-md-12">
+            <form asp-action="Create" asp-controller="VisionMissionValues" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label class="control-label">Language</label>
+                    <select asp-items="ViewBag.Lang" asp-for="LangId" class="form-control"> </select>
+                    <span asp-validation-for="LangId" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Mission" class="control-label"></label>
+                    <textarea asp-for="Mission"></textarea>
+                    <span asp-validation-for="Mission" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Values" class="control-label"></label>
+                    <textarea asp-for="Values"></textarea>
+                    <span asp-validation-for="Values" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Vision" class="control-label"></label>
+                    <textarea asp-for="Vision"></textarea>
+                    <span asp-validation-for="Vision" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <span class="text-danger">@ViewBag.Error</span>
+                </div>
+                <div class="form-group text-center">
+                    <a class="btn btn-outline-secondary" asp-action="Index">Back</a>
+                    <input type="submit" value="Create" class="btn btn-secondary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+@section javascript{
+
+    <script>
+        CKEDITOR.replace("Mission")
+        CKEDITOR.replace("Values");
+        CKEDITOR.replace("Vision");
+    </script>
+}

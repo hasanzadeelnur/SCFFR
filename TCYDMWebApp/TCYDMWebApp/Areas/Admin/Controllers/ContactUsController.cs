@@ -63,6 +63,11 @@ namespace TCYDMWebApp.Areas.Admin.Controllers
                 return View(request);
             }
             ReturnMessage<object> response = new ServiceNode<ContactUsDTO, object>(_localizer, _fc).PostClient(request, "/api/v1/ContactUs/ContactUsAdd");
+            if(response.Code!=200)
+            {
+                ViewBag.Error = response.Message;
+                return View(request);
+            }
             return RedirectToAction("index");
         }
         public async Task<IActionResult> Edit(int id)
@@ -105,6 +110,11 @@ namespace TCYDMWebApp.Areas.Admin.Controllers
         public async Task<IActionResult> Delete(int id)
         {
             ReturnMessage<object> response = new ServiceNode<ContactUsDTO, object>(_localizer, _fc).DeleteClient("/api/v1/ContactUs/ContactUsDelete/" + id);
+            if (response.Code != 200)
+            {
+                TempData["Error"] = response.Message;
+                return RedirectToAction("Index");
+            }
             return RedirectToAction("Index");
         }
     }

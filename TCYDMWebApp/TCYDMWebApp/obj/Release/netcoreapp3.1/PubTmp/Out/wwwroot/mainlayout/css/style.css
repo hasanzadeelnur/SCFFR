@@ -1,4 +1,4 @@
-.menu-items>ul {
+﻿.menu-items>ul {
     display: flex;
     justify-content: space-between;
     padding: 0 3rem 0 3rem;
@@ -134,6 +134,7 @@ select {
     z-index: 999;
     position: absolute;
     top: 60%;
+    left:35%;
     width: inherit;
     visibility: hidden;
     border-radius: 5px;
@@ -169,6 +170,45 @@ select {
 }
 
 
+/*About Us*/
+#about-us-menu {
+    background-color: #fff;
+    z-index: 999;
+    position: absolute;
+    top: 60%;
+    width:170px;
+    visibility: hidden;
+    border-radius: 5px;
+    transition: all .5s;
+    transform: translateY(15px);
+    box-shadow: 15px 15px 20px -5px rgba(0, 0, 0, 0.44);
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+
+#about-us-menu a {
+        color: black;
+        text-decoration: none;
+    }
+
+#about-us-menu li {
+        list-style-type: none;
+        margin-bottom: 0.3em;
+    }
+
+#about-us-menu ul {
+        column-gap: 10px 10px 0 10px;
+    }
+
+#btn-about-us:hover+#about-us-menu {
+    visibility: visible;
+    transform: translateY(0px);
+}
+
+#about-us-menu:hover {
+    visibility: visible;
+}
+
 /* OUR SERVICES MENU */
 
 #Mobile-Nav-Links li {
@@ -183,6 +223,18 @@ select {
     font-size: 14px;
     text-transform: none;
 }
+
+
+#about-us-menu-mobile ul {
+    padding-left: 0;
+}
+
+№about-us-menu-mobile ul a {
+        font-size: 14px;
+        text-transform: none;
+    }
+
+
 header .menu-items{
     font-size:smaller;
 }

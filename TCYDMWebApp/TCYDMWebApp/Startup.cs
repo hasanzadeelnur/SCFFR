@@ -66,10 +66,11 @@ namespace TCYDMWebApp
                     new CultureInfo("de-CH"),
                     new CultureInfo("fr-CH"),
                     new CultureInfo("it-CH"),
-                    new CultureInfo("ru")
+                    new CultureInfo("ru"),
+                    new CultureInfo("tr")
                 };
 
-            options.DefaultRequestCulture = new RequestCulture(culture: "en-US", uiCulture: "en-US");
+            options.DefaultRequestCulture = new RequestCulture(culture: "tr", uiCulture: "tr");
             options.SupportedCultures = supportedCultures;
             options.SupportedUICultures = supportedCultures;
 
@@ -87,6 +88,7 @@ namespace TCYDMWebApp
             }
             else
             {
+                //app.UseDeveloperExceptionPage();
                 app.UseExceptionHandler("/Error");
             }
             app.UseStaticFiles();

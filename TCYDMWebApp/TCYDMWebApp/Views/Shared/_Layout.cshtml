@@ -61,11 +61,16 @@
                 </div>
                 <div class="col-lg-9 menu-items m-auto col-md-8 col-8" style="font-size:smaller">
                     <ul>
-                        <li><a asp-controller="Home" asp-action="WhoWeAre">@SharedLocalizer["WHO WE ARE"]?</a></li>
-                        <li><a asp-controller="Home" asp-action="WhatWeDo" style="text-transform:uppercase">@SharedLocalizer["What We Do"]?</a></li>
+                        <li id="btn-about-us" class="btn-about-us"><a href="#">@SharedLocalizer["About us"]<i class="fas fa-angle-down"></i> </a></li>
+                        <div id="about-us-menu" class="about-us-menu">
+                            <ul>
+                                <li><a style="text-transform:capitalize" asp-controller="Home" asp-action="WhoWeAre">* @SharedLocalizer["WHO WE ARE"]?</a></li>
+                                <li><a style="text-transform:capitalize" asp-controller="Home" asp-action="WhatWeDo">* @SharedLocalizer["What We Do"]?</a></li>
+                                <li><a style="text-transform:capitalize" asp-controller="Home" asp-action="OurVision">* @SharedLocalizer["Our Vision"]</a></li>
+                            </ul>
+                        </div>
                         <li id="btn-our-services" class="btn-our-services"><a href="#">@SharedLocalizer["Our Services"]<i class="fas fa-angle-down"></i> </a></li>
-
-                        <div id="our-services-menu" class="our-services-menu ">
+                        <div id="our-services-menu" class="our-services-menu">
                             <ul>
                                 @await Component.InvokeAsync("Navbar")
                             </ul>
@@ -115,8 +120,14 @@
         <!-- HAMBURGER MENU -->
         <div class="topnav">
             <div id="Mobile-Nav-Links">
-                <a asp-controller="Home" asp-action="WhoWeAre">@SharedLocalizer["WHO WE ARE"]?</a>
-                <a asp-controller="Home" asp-action="WhatWeDo">@SharedLocalizer["What We Do"]?</a>
+                <a href="#" id="btn-about-us-mobile">@SharedLocalizer["About Us"]<i class="fas fa-angle-down"></i> </a>
+                <div id="about-us-menu-mobile" class="about-us-menu-mobile d-none">
+                    <ul>
+                        <li><a asp-controller="Home" asp-action="WhoWeAre">@SharedLocalizer["WHO WE ARE"]?</a></li>
+                        <li><a asp-controller="Home" asp-action="WhatWeDo">@SharedLocalizer["What We Do"]?</a></li>
+                        <li><a asp-controller="Home" asp-action="OurVision">* @SharedLocalizer["Our Vision"]</a></li>
+                    </ul>
+                </div>
                 <a asp-controller="Home" asp-action="ContactUs">@SharedLocalizer["Contact us"]</a>
                 <a href="#" id="btn-our-services-mobile">@SharedLocalizer["Our Services"]<i class="fas fa-angle-down"></i> </a>
                 <div id="our-services-menu-mobile" class="our-services-menu-mobile d-none">
@@ -127,12 +138,12 @@
             </div>
         </div>
         <!-- HAMBURGER MENU -->
-        <div class="first-hd" style="        background-color: #dc1018 !important">
+        <div class="first-hd" style="background-color: #dc1018 !important">
             <div class="row m-0">
-                <div class="col-lg-4 disable"> </div>
-                <div class="col-lg-5 col-md-6 col-xs-6 col-6 operate-div">
-                    <!--<h4 class="operate-clas">SharedLocalizer["WE OPERATE 24/7"]</h4>-->
-                </div>
+                <div class="col-lg-4 "> </div>
+                <div class="col-lg-4 col-md-6 col-xs-6 col-6 operate-div">
+                    <h4 class="operate-clas">Try Us Before They Try You</h4>
+</div>
                 @if (Context.Request.Cookies["UserKey"] != null)
                 {
                     <form asp-controller="Actions" asp-action="OnlineTurn" method="get">
@@ -169,11 +180,11 @@
                     <hr>
                     <div class="row">
                         <div class="col-12 text-center d-flex flex-row justify-content-center">
-                            <a class="p-2" href=""><img src="~/mainlayout/logo/fb.svg" alt=""></a>
-                            <a class="p-2" href=""><img src="~/mainlayout/logo/tl.svg" alt=""></a>
-                            <a class="p-2" href=""><img src="~/mainlayout/logo/ins.svg" alt=""></a>
-                            <a class="p-2" href=""><img src="~/mainlayout/logo/yt.svg" alt=""></a>
-                            <a class="p-2" href=""><img src="~/mainlayout/logo/tl (2).svg" alt=""></a>
+                            <a class="p-2" href=""><div style="border: 1px solid white; border-radius: 135px; background-color: white;"><i style="margin: 4px 7px 4px 7px; color: #dc1018; font-size: 12px;" class="fab fa-facebook-f"></i></div></a>
+                            <a class="p-2" href=""><div style="border: 1px solid white; border-radius: 135px; background-color: white;"><i style="margin: 4px 6px 4px 6px; color: #dc1018; font-size: 12px;" class="fab fa-telegram-plane"></i></div></a>
+                            <a class="p-2" href=""><div style="border: 1px solid white; border-radius: 135px; background-color: white;"><i style="margin: 4px 6px 4px 6px; color: #dc1018; font-size: 12px;" class="fab fa-instagram"></i></div></a>
+                            <a class="p-2" href=""><div style="border: 1px solid white; border-radius: 135px; background-color: white;"><i style="margin: 4px 5px 4px 5px; color: #dc1018; font-size: 12px;" class="fab fa-youtube"></i></div></a>
+                            <a class="p-2" href=""><div style="border: 1px solid white; border-radius: 135px; background-color: white;"><i style="margin: 4px 5px 4px 5px; color: #dc1018; font-size: 12px;" class="fab fa-twitter"></i></div></a>
                         </div>
                         <div class="col-12 text-center">
                             <p style="color:white">

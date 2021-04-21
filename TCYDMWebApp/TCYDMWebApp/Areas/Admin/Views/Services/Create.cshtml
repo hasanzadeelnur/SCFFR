@@ -73,6 +73,9 @@
                     <textarea asp-for="Info"></textarea>
                     <span asp-validation-for="Info" class="text-danger"></span>
                 </div>
+                <div class="form-group">
+                    <span class="text-danger">@ViewBag.Error</span>
+                </div>
                 <div class="form-group text-center">
                     <a class="btn btn-outline-secondary" asp-action="OnlineQuery">Back</a>
                     <input type="submit" value="Create" class="btn btn-secondary" />
