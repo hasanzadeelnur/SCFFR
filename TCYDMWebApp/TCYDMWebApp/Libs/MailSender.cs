@@ -33,7 +33,7 @@ namespace TCYDMWebApp.Helper
             };
             using (SmtpClient client = new SmtpClient())
             {
-                client.Connect("smtp.gmail.com", 465, true);
+                client.Connect("smtp.yandex.com", 465, true);
                 client.Authenticate(SmtpEmail, SmtpPassword);
                 client.Send(message);
                 client.Disconnect(true);

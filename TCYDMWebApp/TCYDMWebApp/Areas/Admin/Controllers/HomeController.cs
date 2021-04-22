@@ -115,7 +115,10 @@ namespace TCYDMWebApp.Areas.Admin.Controllers
 
          [HttpPost]
         public async Task<IActionResult> Create([Bind("Id,Photo,PhotoUpload")] HomePage home)
-        {
+        { if(!ModelState.IsValid)
+            {
+                return View();
+            }
             if (home.PhotoUpload.Length < (1024 * 1024) * 2 && (home.PhotoUpload.ContentType == "image/png" ||
                    home.PhotoUpload.ContentType == "image/svg+xml" ||
                    home.PhotoUpload.ContentType == "image/jpeg"))
@@ -159,6 +162,10 @@ namespace TCYDMWebApp.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit([Bind("Id,Photo,PhotoUpload")] HomePage home, int id)
         {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
             if (home.PhotoUpload.Length < (1024 * 1024) * 2 && (home.PhotoUpload.ContentType == "image/png" ||
                   home.PhotoUpload.ContentType == "image/svg+xml" ||
                   home.PhotoUpload.ContentType == "image/jpeg"))

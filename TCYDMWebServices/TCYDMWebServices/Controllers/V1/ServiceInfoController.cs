@@ -172,12 +172,15 @@ namespace TCYDMWebServices.Controllers.V1
                     foreach (var item in additions)
                     {
                         _db.serviceadditions.Remove(item);
-                        _db.SaveChanges();
                     }
+                    _db.SaveChanges();
                 }
-                List<ServiceAddition> addServices = request.ServiceAdditions.Select(t => new ServiceAddition { InputId = t.InputId, PlaceHolder = t.PlaceHolder, ServiceId = request.ServiceId }).ToList();
-
-
+                List<ServiceAddition> addServices = new List<ServiceAddition>();
+                if (request.ServiceAdditions !=null)
+                {
+                    addServices = request.ServiceAdditions.Select(t => new ServiceAddition { InputId = t.InputId, PlaceHolder = t.PlaceHolder, ServiceId = request.ServiceId }).ToList();
+                }
+              
                 service.IsLocal = request.IsLocal;
                 service.ServiceId = request.ServiceId;
                 service.LanguageId = request.LanguageId;

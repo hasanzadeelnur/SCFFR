@@ -90,8 +90,6 @@ namespace TCYDMWebApp.Areas.Admin.Controllers
                 return View(request);
             }
                 return RedirectToAction("index");
-
-            return View(request);
         }
         [HttpGet]
         [Route("Admin/Services/Edit/{id}/{lang}")]
@@ -123,9 +121,12 @@ namespace TCYDMWebApp.Areas.Admin.Controllers
             {
                 return View(request);
             }
-            if (request.ServiceAdditions == null || request.ServiceAdditions.Count>0)
+            if (request.ServiceAdditions != null)
             {
-                request.ServiceId = 1;
+                if(request.ServiceAdditions.Count > 0)
+                {
+                    request.NeedsAdittion = 1;
+                }
             }
             if(!ModelState.IsValid)
             {
