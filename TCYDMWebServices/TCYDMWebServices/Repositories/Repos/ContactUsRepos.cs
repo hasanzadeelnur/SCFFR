@@ -24,6 +24,7 @@ namespace TCYDMWebServices.Repositories.Repos
                 {
                     Id = obj.Id,
                     Phone = obj.Phone,
+                    LandLine=obj.LandLine,
                     Content=obj.Content,
                     Adress = obj.Adress,
                     Email = obj.Email,
@@ -64,6 +65,7 @@ namespace TCYDMWebServices.Repositories.Repos
                 {
                     Id = data.Id,
                     Phone = data.Phone,
+                    LandLine=data.LandLine,
                     Content=data.Content,
                     Adress = data.Adress,
                     Email = data.Email,
@@ -89,6 +91,7 @@ namespace TCYDMWebServices.Repositories.Repos
             {
                 ContactUs data = _db.contactuss.Find(Id);
                 data.Phone = obj.Phone;
+                data.LandLine = obj.LandLine;
                 data.Adress = obj.Adress;
                 data.Content = obj.Content;
                 data.Email = obj.Email;

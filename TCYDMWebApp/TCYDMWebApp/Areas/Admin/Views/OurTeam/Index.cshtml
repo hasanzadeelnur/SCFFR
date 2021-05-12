@@ -1,0 +1,126 @@
+﻿@model IEnumerable<TCYDMWebApp.DTO.OurTeamDTO>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="right_col row" role="main" style="min-height: 1661px;">
+    <div class="col-md-12 col-sm-12 ">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Contact Us</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card-box table-responsive">
+
+                            <div id="datatable_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap no-footer">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <p>
+                                            <a asp-area="Admin" asp-controller="OurTeam" asp-action="Create" class="btn btn-outline-secondary">New</a>
+                                        </p>
+                                        <p>@TempData["Error"]</p>
+                                        <table id="demo">
+                                            <thead>
+                                                <tr role="row">
+                                                    <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 156px;">@Html.DisplayNameFor(model => model.Id)</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 156px;">@Html.DisplayNameFor(model => model.FullName)</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 156px;">@Html.DisplayNameFor(model => model.Job)</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 156px;">@Html.DisplayNameFor(model => model.Language)</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 156px;"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var item in Model)
+                                                {
+                                                    <tr role="row" class="odd">
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Id)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.FullName)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Job)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Language)
+                                                        </td>
+                                                        <td>
+                                                            <a asp-action="Edit" asp-route-id="@item.Id">
+                                                                <i class="fas fa-pencil-alt"></i>
+                                                            </a>
+
+                                                            <a asp-controller="OurTeam" asp-action="Delete" asp-route-id="@item.Id" class="text-danger sweet-delete">
+                                                                <i class="fas fa-trash"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                }
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section javascript
+{
+    <script>
+        $(document).ready(function () {
+            $(".sweet-delete").click(function (event) {
+                event.preventDefault();
+                var sweet = $(this);
+                swal({
+                    title: "Eminsiniz?",
+                    text: "Melumatlariniz Silinecek",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                }).then((willDelete) => {
+                    if (willDelete) {
+                        window.location = $(this).attr('href');
+                    } else {
+                        swal("Hata!");
+                    }
+                });
+            });
+        });
+        var filtersConfig = {
+            // instruct TableFilter location to import ressources from
+            base_path: 'https://unpkg.com/tablefilter@latest/dist/tablefilter/',
+            col_4: 'select',
+            alternate_rows: true,
+            rows_counter: true,
+            btn_reset: true,
+            loader: true,
+            mark_active_columns: true,
+            highlight_keywords: true,
+            no_results_message: true,
+            col_types: [
+                'string', 'string', 'number',
+                'number', 'number', 'number',
+                'number', 'number', 'number'
+            ],
+            extensions: [{
+                name: 'sort',
+                images_path: 'https://unpkg.com/tablefilter@latest/dist/tablefilter/style/themes/'
+            }]
+        };
+
+        var tf = new TableFilter('demo', filtersConfig);
+        tf.init();
+    </script>
+}

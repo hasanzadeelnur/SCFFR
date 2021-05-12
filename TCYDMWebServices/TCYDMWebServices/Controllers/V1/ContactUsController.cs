@@ -50,6 +50,7 @@ namespace TCYDMWebServices.Controllers.V1
                                                         Content = contact.Content,
                                                         Email = contact.Email,
                                                         Phone = contact.Phone,
+                                                        LandLine=contact.LandLine,
                                                         Language = langluage.LangluageName
                                                     };
             return Ok(new ReturnMessage(contacts));

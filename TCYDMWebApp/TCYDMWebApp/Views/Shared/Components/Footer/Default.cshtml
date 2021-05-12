@@ -13,7 +13,10 @@ else
         <ul class="info-ul">
             @for (int i = 0; i < count + 1; i++)
             {
-                <li><a style="color:white;" href="/home/services/@Model?[i].ServiceId">* @Model?[i].Name</a></li>
+                @if (Model.Count > i)
+                {
+                    <li><a style="color:white;" href="/home/services/@Model?[i].ServiceId">* @Model?[i].Name</a></li>
+                }
             }
 
         </ul>
@@ -34,8 +37,14 @@ else
         <ul class="info-ul">
             @for (int i = (count + 1) * 2; i <= count * 3; i++)
             {
-                <li><a style="color:white;" href="/home/services/@Model?[i].ServiceId">* @Model?[i].Name</a></li>
+                @if (Model.Count > i)
+                {
+                    <li><a style="color:white;" href="/home/services/@Model?[i].ServiceId">* @Model?[i].Name</a></li>
+                }
             }
         </ul>
+    </div>
+    <div id="services-img">
+        <a href="~/mainlayout/img/support-center-folyo-foreks.jpg" target="_blank"><img src="~/mainlayout/img/support-center-folyo-foreks.jpg" width="200" height="100" /></a>
     </div>
 }

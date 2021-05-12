@@ -18,6 +18,7 @@ using TCYDMWebApp.Libs;
 using TCYDMWebApp.Models;
 using TCYDMWebApp.Repositories.Lang;
 using TCYDMWebApp.ViewModels;
+using TCYDMWebServices.DTO;
 using TCYDMWebServices.Repositories;
 
 namespace TCYDMWebApp.Controllers
@@ -49,7 +50,7 @@ namespace TCYDMWebApp.Controllers
         public IActionResult ServiceInfo(int serviceId)
         {
             #region ServiceData
-                        int langId = 3;
+                        int langId = 1;
 
                         if (Request.Cookies["LangKey"] != null)
                         {
@@ -81,7 +82,7 @@ namespace TCYDMWebApp.Controllers
         public IActionResult WhatWeDo()
         {
             #region ServiceData
-            int langId = 3;
+            int langId = 1;
 
             if (Request.Cookies["LangKey"] != null)
             {
@@ -99,7 +100,7 @@ namespace TCYDMWebApp.Controllers
         public IActionResult WhoWeAre()
         {
             #region ServiceData
-            int langId = 3;
+            int langId = 1;
 
             if (Request.Cookies["LangKey"] != null)
             {
@@ -116,7 +117,39 @@ namespace TCYDMWebApp.Controllers
         public IActionResult OurVision()
         {
             #region ServiceData
-            int langId = 3;
+            int langId = 1;
+
+            if (Request.Cookies["LangKey"] != null)
+            {
+                langId = Convert.ToInt32(Request.Cookies["LangKey"]);
+            }
+
+            VMVDTO model = new ServiceNode<object, VMVDTO>(_fc)
+                   .GetClient("/api/v1/vision/getbylang/" + langId).Data;
+
+            #endregion
+            return View(model);
+        }
+        public IActionResult OurMission()
+        {
+            #region ServiceData
+            int langId = 1;
+
+            if (Request.Cookies["LangKey"] != null)
+            {
+                langId = Convert.ToInt32(Request.Cookies["LangKey"]);
+            }
+
+            VMVDTO model = new ServiceNode<object, VMVDTO>(_fc)
+                   .GetClient("/api/v1/vision/getbylang/" + langId).Data;
+
+            #endregion
+            return View(model);
+        }
+        public IActionResult OurValues()
+        {
+            #region ServiceData
+            int langId = 1;
 
             if (Request.Cookies["LangKey"] != null)
             {
@@ -134,7 +167,7 @@ namespace TCYDMWebApp.Controllers
         public IActionResult ContactUs()
         {
             #region ServiceData
-            int langId = 3;
+            int langId = 1;
 
             if (Request.Cookies["LangKey"] != null)
             {
@@ -147,6 +180,50 @@ namespace TCYDMWebApp.Controllers
             #endregion
             return View(model);
         }
+
+        [HttpGet]
+        public IActionResult Blog(int page=1)
+        {
+            #region ServiceData
+            int langId = 1;
+            ViewBag.Page = page;
+            if (Request.Cookies["LangKey"] != null)
+            {
+                langId = Convert.ToInt32(Request.Cookies["LangKey"]);
+            }
+
+            BlogsDTO model = new ServiceNode<object, BlogsDTO>(_fc)
+           .GetClient("/api/v1/Blog/BlogGet/"+ langId + "/"+page).Data;
+
+            #endregion
+            return View(model);
+        }
+
+        [HttpGet]
+        public IActionResult SingleBlog(int id)
+        {
+
+            BlogFindDTO model = new ServiceNode<object, BlogFindDTO>(_fc)
+             .GetClient("/api/v1/Blog/BlogGetId/" + id).Data;
+            ViewBag.Photo = model.Blog.ImagePath;
+            ViewBag.Title = model.Blog.Header;
+            return View(model);
+        }
+
+        [HttpGet]
+        public IActionResult OurTeam()
+        {
+            int langId = 1;
+            if (Request.Cookies["LangKey"] != null)
+            {
+                langId = Convert.ToInt32(Request.Cookies["LangKey"]);
+            }
+            List<OurTeam> model = new ServiceNode<object, List<OurTeam>>(_fc)
+            .GetClient("/api/v1/OurTeam/OurTeamGet/"+langId).Data;
+            return View(model);
+        }
+
+
         [HttpPost]
         public IActionResult SetLanguage([FromForm] LangDTO request)
         {

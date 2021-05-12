@@ -1,0 +1,59 @@
+﻿@model BlogFindDTO
+@using Microsoft.AspNetCore.Mvc.Localization
+@using TCYDMWebApp.Repositories.Lang
+
+@inject IHtmlLocalizer<SharedResource> SharedLocalizer
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 col-12 single-blog-head">
+            <h1>@Model.Blog.Header</h1>
+            <span class="mr-3"><i class="far fa-clock mr-1"></i>@Model.Blog.Date</span>
+            <span><i class="far fa-eye mr-1"></i>@Model.Blog.View</span>
+        </div>
+        <div class="col-lg-12 col-12 single-blog-content">
+            <div class="blog-img">
+                <img src="~/uploads/@Model.Blog.ImagePath" />
+            </div>
+            <div>
+                @Html.Raw(Model.Blog.Body)
+            </div>
+            <div class="single-blog-social">
+                <span>@SharedLocalizer["Share on sosial media"]:</span>
+                <div class="single-socials">
+                    <button style="background-color: transparent; border: none;" class="button" data-sharer="twitter" data-title="@Model.Blog.Header" data-hashtags="scffr,blogs" data-url="https://@Context.Request.Host@Context.Request.Path"><img src="~/mainlayout/img/iconfinder_Twitter_4700653.svg" /> </button>
+                    <button style="background-color: transparent; border: none;" class="button" data-sharer="facebook" data-hashtag="scffr" data-url="https://@Context.Request.Host@Context.Request.Path"><img src="~/mainlayout/img/iconfinder_Facebook_4745722.svg" /></button>
+                    <button style="background-color: transparent; border: none;" class="button" data-sharer="linkedin" data-url="https://@Context.Request.Host@Context.Request.Path"><img src="~/mainlayout/img/iconfinder_Linkedin_4745729.svg" /></button>
+                    <button style="background-color: transparent; border: none;" class="button" data-sharer="email" data-title="@Model.Blog.Header" data-url="https://@Context.Request.Host@Context.Request.Path" data-subject="Hey! Check out that URL" data-to="some@email.com"><img src="~/mainlayout/img/iconfinder_Email_4745721.svg" /></button>
+                    <button style="background-color: transparent; border: none;" class="button" data-sharer="whatsapp" data-title="@Model.Blog.Header" data-url="https://@Context.Request.Host@Context.Request.Path"><img src="~/mainlayout/img/iconfinder_Whatsapp_4700658.svg" /></button>
+                    <button style="background-color: transparent; border: none;" class="button" data-sharer="vk" data-caption="Try Us Before They Try You" data-title="@Model.Blog.Header" data-url="https://@Context.Request.Host@Context.Request.Path"><img src="~/mainlayout/img/iconfinder_VK_4700657.svg" /></button>
+                </div>
+            </div>
+        </div>
+        <div class="fb-comments col-lg-12 col-12" data-href="https://@Context.Request.Host@Context.Request.Path" data-width="100%" data-numposts="10"></div>
+    </div>
+    <div class="col-lg-12 mt-3 ">
+        <div class="similar-blogs">
+            <div class="row">
+                <div class="col-lg-12 col-12" style="text-align: -webkit-center;">
+                    <h2>@SharedLocalizer["Latest Blogs"]</h2>
+                </div>
+                @foreach (var item in Model.Blogs)
+                {
+                    <div class="col-lg-4 col-md-6 col-12 blogs mt-2 mb-2">
+                        <div class="blog-wrapper">
+                            <img src="~/uploads/@item.ImagePath" />
+                            <div class="blog-content">
+                                <span><i class="far fa-clock mr-1"></i>@item.Date</span>
+                                <h5>@item.Header</h5>
+                                <div class="w-100 text-center mt-3">
+                                    <a asp-action="SingleBlog" asp-controller="Home" asp-route-id="@item.Id">@SharedLocalizer["Read More"] <i class="fas fa-long-arrow-alt-right"> </i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+</div>

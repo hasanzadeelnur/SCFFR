@@ -2,9 +2,12 @@
     <select style="text-transform:uppercase;font-weight:bold;" name="culture" class="lng">
         @if (@Context.Request.Cookies["LangKey"] == null)
         {
+            <option value="3">tr</option>
             <option selected value="1">en</option>
             <option value="2">ru</option>
-            <option value="3">tr</option>
+            <option value="4">ar</option>
+            <option value="5">fa</option>
+            <option value="6">fr</option>
         }
         else
         {
@@ -16,14 +19,6 @@
             {
                 <option value="3">tr</option>
             }
-            if (@Context.Request.Cookies["LangKey"] == "2")
-            {
-                <option selected value="2">ru</option>
-            }
-            else
-            {
-                <option value="2">ru</option>
-            }
             if (@Context.Request.Cookies["LangKey"] == "1")
             {
                 <option selected value="1">en</option>
@@ -32,6 +27,40 @@
             {
                 <option value="1">en</option>
             }
+            if (@Context.Request.Cookies["LangKey"] == "2")
+            {
+                <option selected value="2">ru</option>
+            }
+            else
+            {
+                <option value="2">ru</option>
+            }
+            if (@Context.Request.Cookies["LangKey"] == "4")
+            {
+                <option selected value="4">Ar</option>
+            }
+            else
+            {
+                <option value="4">Ar</option>
+            }
+            if (@Context.Request.Cookies["LangKey"] == "5")
+            {
+                <option selected value="5">Fa</option>
+            }
+            else
+            {
+                <option value="5">Fa</option>
+            }
+            if (@Context.Request.Cookies["LangKey"] == "6")
+            {
+                <option selected value="6">Fa</option>
+            }
+            else
+            {
+                <option value="6">Fa</option>
+            }
+
+
         }
 
     </select>

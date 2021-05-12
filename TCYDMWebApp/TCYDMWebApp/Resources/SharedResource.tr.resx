@@ -120,11 +120,17 @@
   <data name="About us" xml:space="preserve">
     <value>Hakkımızda</value>
   </data>
+  <data name="Address" xml:space="preserve">
+    <value>Adres</value>
+  </data>
   <data name="Adress" xml:space="preserve">
     <value>Adres</value>
   </data>
   <data name="All rights reserved" xml:space="preserve">
     <value>Tüm hakları saklıdır</value>
+  </data>
+  <data name="Blog" xml:space="preserve">
+    <value>Blog</value>
   </data>
   <data name="Cannot find this type of data" xml:space="preserve">
     <value>Bu tür veriler bulunamıyor</value>
@@ -145,7 +151,7 @@
     <value>Onay gerekli</value>
   </data>
   <data name="Contact us" xml:space="preserve">
-    <value>Bize Ulaşın</value>
+    <value>BİZE ULAŞIN</value>
   </data>
   <data name="Country is required" xml:space="preserve">
     <value>Ülke gerekli</value>
@@ -169,10 +175,16 @@
     <value>Parolanızı mı unuttunuz</value>
   </data>
   <data name="Gender is required" xml:space="preserve">
-    <value>Gender is required</value>
+    <value>Cinsiyet gerekli</value>
   </data>
   <data name="Get Turn" xml:space="preserve">
     <value>Dönüş Alın</value>
+  </data>
+  <data name="Landline" xml:space="preserve">
+    <value>Sabit Hat</value>
+  </data>
+  <data name="Latest Blogs" xml:space="preserve">
+    <value>Son Bloglar</value>
   </data>
   <data name="Login" xml:space="preserve">
     <value>Oturum aç</value>
@@ -192,6 +204,9 @@
   <data name="Mobile" xml:space="preserve">
     <value>Cep Telefonu</value>
   </data>
+  <data name="Mobile Phone" xml:space="preserve">
+    <value>Cep Telefonu</value>
+  </data>
   <data name="Name" xml:space="preserve">
     <value>İsim</value>
   </data>
@@ -202,16 +217,19 @@
     <value>Çevrimiçi sorgu</value>
   </data>
   <data name="Our Mission" xml:space="preserve">
-    <value>Misyonumuz</value>
+    <value>MİSYONUMUZ</value>
   </data>
   <data name="Our Services" xml:space="preserve">
-    <value>Hizmetlerimiz</value>
+    <value>HİZMETLERİMİZ</value>
+  </data>
+  <data name="Our Team" xml:space="preserve">
+    <value>EKİBİMİZ</value>
   </data>
   <data name="Our Values" xml:space="preserve">
-    <value>Değerlerimiz</value>
+    <value>DEĞERLERİMİZ</value>
   </data>
   <data name="Our Vision" xml:space="preserve">
-    <value>Vizyonumuz</value>
+    <value>VİZYONUMUZ</value>
   </data>
   <data name="Page is not found" xml:space="preserve">
     <value>Sayfa bulunamadı</value>
@@ -220,7 +238,7 @@
     <value>Şifre</value>
   </data>
   <data name="Password is required" xml:space="preserve">
-    <value>Password is required</value>
+    <value>Şifre gereklidir</value>
   </data>
   <data name="Password is wrong" xml:space="preserve">
     <value>Şifre yanlış</value>
@@ -266,6 +284,9 @@
   </data>
   <data name="Profile" xml:space="preserve">
     <value>Profil</value>
+  </data>
+  <data name="Read More" xml:space="preserve">
+    <value>Devamını Oku</value>
   </data>
   <data name="Real estate services" xml:space="preserve">
     <value>Gayrimenkul hizmetleri</value>
@@ -315,6 +336,9 @@
   <data name="Service" xml:space="preserve">
     <value>Hizmet</value>
   </data>
+  <data name="Share on sosial media" xml:space="preserve">
+    <value>Sosyal medyada paylaşın</value>
+  </data>
   <data name="Sign in" xml:space="preserve">
     <value>Oturum Aç</value>
   </data>
@@ -348,6 +372,9 @@
   <data name="Understood" xml:space="preserve">
     <value>Anladım</value>
   </data>
+  <data name="VISION, MISSION, VALUES" xml:space="preserve">
+    <value>VİZYON, MİSYON, DEĞERLER</value>
+  </data>
   <data name="WE OPERATE 24/7" xml:space="preserve">
     <value>МЫ РАБОТАЕМ 24/7</value>
   </data>
@@ -357,11 +384,11 @@
   <data name="We send password restore link to your email, please check your email adress" xml:space="preserve">
     <value>E-postanıza şifre geri yükleme bağlantısı gönderiyoruz, lütfen e-posta adresinizi kontrol edin</value>
   </data>
-  <data name="What We Do" xml:space="preserve">
-    <value>Ne Yapıyoruz</value>
+  <data name="WHAT WE DO" xml:space="preserve">
+    <value>NE YAPIYORUZ</value>
   </data>
   <data name="WHO WE ARE" xml:space="preserve">
-    <value>Biz Kimiz</value>
+    <value>BİZ KİMİZ</value>
   </data>
   <data name="Wrong credentials" xml:space="preserve">
     <value>Yanlış kimlik bilgileri</value>

@@ -8259,11 +8259,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hasan\\Desktop\\Working Area\\SCFFR\\SCFFR\\TCYDMWebServices\\TCYDMWebServices\\TCYDMWebServices.csproj",
+      "projectUniqueName": "C:\\Users\\hasan\\Desktop\\New folder (2)\\SCFFR\\TCYDMWebServices\\TCYDMWebServices\\TCYDMWebServices.csproj",
       "projectName": "TCYDMWebServices",
-      "projectPath": "C:\\Users\\hasan\\Desktop\\Working Area\\SCFFR\\SCFFR\\TCYDMWebServices\\TCYDMWebServices\\TCYDMWebServices.csproj",
+      "projectPath": "C:\\Users\\hasan\\Desktop\\New folder (2)\\SCFFR\\TCYDMWebServices\\TCYDMWebServices\\TCYDMWebServices.csproj",
       "packagesPath": "C:\\Users\\hasan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hasan\\Desktop\\Working Area\\SCFFR\\SCFFR\\TCYDMWebServices\\TCYDMWebServices\\obj\\",
+      "outputPath": "C:\\Users\\hasan\\Desktop\\New folder (2)\\SCFFR\\TCYDMWebServices\\TCYDMWebServices\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -64,10 +64,12 @@ namespace TCYDMWebApp
                 {
                     new CultureInfo("en-US"),
                     new CultureInfo("de-CH"),
-                    new CultureInfo("fr-CH"),
+                    new CultureInfo("fr"),
                     new CultureInfo("it-CH"),
                     new CultureInfo("ru"),
-                    new CultureInfo("tr")
+                    new CultureInfo("tr"),
+                    new CultureInfo("ar"),
+                    new CultureInfo("fa"),
                 };
 
             options.DefaultRequestCulture = new RequestCulture(culture: "tr", uiCulture: "tr");

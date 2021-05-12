@@ -120,11 +120,17 @@
   <data name="About us" xml:space="preserve">
     <value>О нас</value>
   </data>
+  <data name="Address" xml:space="preserve">
+    <value>Адрес</value>
+  </data>
   <data name="Adress" xml:space="preserve">
     <value>Адрес</value>
   </data>
   <data name="All rights reserved" xml:space="preserve">
     <value>Все права защищены</value>
+  </data>
+  <data name="Blog" xml:space="preserve">
+    <value>Блог</value>
   </data>
   <data name="Cannot find this type of data" xml:space="preserve">
     <value>Не могу найти этот тип данных</value>
@@ -174,6 +180,12 @@
   <data name="Get Turn" xml:space="preserve">
     <value>Получить поворот</value>
   </data>
+  <data name="Landline" xml:space="preserve">
+    <value>Стационарный номер</value>
+  </data>
+  <data name="Latest Blogs" xml:space="preserve">
+    <value>Последние Блоги</value>
+  </data>
   <data name="Login" xml:space="preserve">
     <value>логин</value>
   </data>
@@ -192,6 +204,9 @@
   <data name="Mobile" xml:space="preserve">
     <value>Моб. телефон</value>
   </data>
+  <data name="Mobile Phone" xml:space="preserve">
+    <value>Номер телефонa</value>
+  </data>
   <data name="Name" xml:space="preserve">
     <value>имя</value>
   </data>
@@ -206,6 +221,9 @@
   </data>
   <data name="Our Services" xml:space="preserve">
     <value>наши сервисы</value>
+  </data>
+  <data name="Our Team" xml:space="preserve">
+    <value>Наша команда</value>
   </data>
   <data name="Our Values" xml:space="preserve">
     <value>Наши ценности</value>
@@ -267,6 +285,9 @@
   <data name="Profile" xml:space="preserve">
     <value>Профиль</value>
   </data>
+  <data name="Read More" xml:space="preserve">
+    <value>Читать далее</value>
+  </data>
   <data name="Real estate services" xml:space="preserve">
     <value>Риэлторские услуги</value>
   </data>
@@ -315,6 +336,9 @@
   <data name="Service" xml:space="preserve">
     <value>обслуживание</value>
   </data>
+  <data name="Share on sosial media" xml:space="preserve">
+    <value>Поделиться в социальных сетях</value>
+  </data>
   <data name="Sign in" xml:space="preserve">
     <value>логин</value>
   </data>
@@ -348,6 +372,9 @@
   <data name="Understood" xml:space="preserve">
     <value>Понял</value>
   </data>
+  <data name="VISION, MISSION, VALUES" xml:space="preserve">
+    <value>Видение, Миссия, Ценности</value>
+  </data>
   <data name="WE OPERATE 24/7" xml:space="preserve">
     <value>МЫ РАБОТАЕМ 24/7</value>
   </data>
@@ -357,11 +384,11 @@
   <data name="We send password restore link to your email, please check your email adress" xml:space="preserve">
     <value>Мы отправляем ссылку для восстановления пароля на вашу электронную почту, пожалуйста, проверьте свой адрес электронной почты</value>
   </data>
-  <data name="What We Do" xml:space="preserve">
+  <data name="WHAT WE DO" xml:space="preserve">
     <value>Что мы делаем</value>
   </data>
   <data name="WHO WE ARE" xml:space="preserve">
-    <value>КТО МЫ ЕСТЬ</value>
+    <value>Кто Мы</value>
   </data>
   <data name="Wrong credentials" xml:space="preserve">
     <value>Неверные учетные данные</value>

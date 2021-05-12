@@ -27,6 +27,11 @@
                     <span asp-validation-for="Phone" class="text-danger"></span>
                 </div>
                 <div class="form-group">
+                    <label asp-for="LandLine" class="control-label"></label>
+                    <input asp-for="LandLine" class="form-control" />
+                    <span asp-validation-for="LandLine" class="text-danger"></span>
+                </div>
+                <div class="form-group">
                     <label class="control-label">Language</label>
                     <select asp-items="ViewBag.Lang" asp-for="LanguageId" class="form-control"> </select>
                     <span asp-validation-for="LanguageId" class="text-danger"></span>
@@ -37,7 +42,7 @@
                     <span asp-validation-for="Content" class="text-danger"></span>
                 </div>
                 <div class="form-group text-center">
-                    <a class="btn btn-outline-secondary" asp-action="homeview">Back</a>
+                    <a class="btn btn-outline-secondary" asp-action="index">Back</a>
                     <input type="submit" value="Create" class="btn btn-secondary" />
                 </div>
             </form>

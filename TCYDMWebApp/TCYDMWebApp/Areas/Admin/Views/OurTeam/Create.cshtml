@@ -1,0 +1,50 @@
+﻿@model TCYDMWebApp.DTO.OurTeamAddDTO
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="right_col" role="main" style="min-height: 1661px;">
+    <hr />
+    <div class="row">
+        <div class="col-md-12">
+            <form asp-action="Create" method="post" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <div class="">
+                        <img style="width: 770px; height: 401px;" src="" onerror="this.onerror=null; this.src='/AdminPanel/images/987979545.jpeg'" id="blah" alt="...">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Image" class="control-label"></label>
+                    <input asp-for="Image" id="imgInp" class="form-control" />
+                    <span asp-validation-for="Image" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="FullName" class="control-label"></label>
+                    <input asp-for="FullName" class="form-control" />
+                    <span asp-validation-for="FullName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Job" class="control-label"></label>
+                    <input asp-for="Job"/>
+                    <span asp-validation-for="Job" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Language</label>
+                    <select asp-items="ViewBag.Lang" asp-for="LanguageId" class="form-control"> </select>
+                    <span asp-validation-for="LanguageId" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <span class="text-danger">@ViewBag.Error</span>
+                </div>
+                <div class="form-group text-center">
+                    <a class="btn btn-outline-secondary" asp-action="index">Back</a>
+                    <input type="submit" value="Create" class="btn btn-secondary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

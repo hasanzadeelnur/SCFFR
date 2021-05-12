@@ -31,7 +31,8 @@ namespace TCYDMWebServices.Data
         public DbSet<ServiceAdditionNumber> serviceadditionnumber { get; set; }
         public DbSet<ServiceAdditionFile> serviceadditionfile { get; set; }
         public DbSet<VisionMissionValues> visionmissionvalues { get; set; }
-
+        public DbSet<OurTeam> ourteams { get; set; }
+        public DbSet<Blog> blogs { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>()

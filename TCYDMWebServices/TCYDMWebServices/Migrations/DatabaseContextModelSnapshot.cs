@@ -34,6 +34,38 @@ namespace TCYDMWebServices.Migrations
                     b.ToTable("admintables");
                 });
 
+            modelBuilder.Entity("TCYDMWebServices.Models.Blog", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Body")
+                        .IsRequired()
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Header")
+                        .IsRequired()
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("ImagePath")
+                        .IsRequired()
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<int>("LanguageId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("View")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("blogs");
+                });
+
             modelBuilder.Entity("TCYDMWebServices.Models.ContactUs", b =>
                 {
                     b.Property<int>("Id")
@@ -49,6 +81,10 @@ namespace TCYDMWebServices.Migrations
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("LandLine")
                         .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
@@ -163,6 +199,31 @@ namespace TCYDMWebServices.Migrations
                     b.ToTable("onlinequeries");
                 });
 
+            modelBuilder.Entity("TCYDMWebServices.Models.OurTeam", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("ImagePath")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("Job")
+                        .IsRequired()
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<int>("LanguageId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ourteams");
+                });
+
             modelBuilder.Entity("TCYDMWebServices.Models.PDFClass", b =>
                 {
                     b.Property<int>("Id")
@@ -191,9 +252,6 @@ namespace TCYDMWebServices.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int>("CountryId")
-                        .HasColumnType("int");
-
                     b.Property<int>("LanguageId")
                         .HasColumnType("int");
 
@@ -203,8 +261,6 @@ namespace TCYDMWebServices.Migrations
                         .HasMaxLength(1000);
 
                     b.HasKey("Id");
-
-                    b.HasIndex("CountryId");
 
                     b.ToTable("regions");
                 });
@@ -488,15 +544,6 @@ namespace TCYDMWebServices.Migrations
                     b.HasOne("TCYDMWebServices.Models.OnlineQuery", "OnlineQuery")
                         .WithMany("PdfClasses")
                         .HasForeignKey("OnlineQueryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("TCYDMWebServices.Models.Region", b =>
-                {
-                    b.HasOne("TCYDMWebServices.Models.Country", "Country")
-                        .WithMany("Regions")
-                        .HasForeignKey("CountryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

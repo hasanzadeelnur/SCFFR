@@ -3,7 +3,6 @@
 @using Microsoft.AspNetCore.Mvc.Localization
 @using TCYDMWebApp.Repositories.Lang
 
-
 @inject IHtmlLocalizer<SharedResource> SharedLocalizer
 
 <!doctype html>
@@ -17,6 +16,15 @@
     <link href="~/mainlayout/logo/logomain.png" rel="icon" type="image/gif">
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="viewport" content="width=device-width initial-scale=1 shrink-to-fit=no">
+
+
+    <meta property="og:url" content="@Context.Request.Host@Context.Request.Path" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="SCFFR" />
+    <meta property="og:description" content="@ViewBag.Title" />
+    <meta property="og:image" content="~/uploads/@ViewBag.Photo" />
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css" integrity="sha512-oc9+XSs1H243/FRN9Rw62Fn8EtxjEYWHXRvjS43YtueEewbS6ObfXcJNyohjHqVKFPoXXUxwc+q1K7Dee6vv9g==" crossorigin="anonymous" />
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
@@ -25,6 +33,27 @@
     @RenderSection("ValidationJS", required: false)
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '468686337757736');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+             src="https://www.facebook.com/tr?id=468686337757736&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
     <link rel="stylesheet" href="~/mainlayout/css/style.css">
 </head>
 
@@ -32,10 +61,10 @@
     <header>
         <div class="container mt-2 mb-2">
             <!-- PHONE VERSION CONTACT -->
-            <div class="row phone-version-contact d-none">
+            <div class="row phone-version-contact d-none wp-nowrap">
                 <div class="contact-number col-md-6 col-6 col-xs-6 m-auto">
-                    <a href="tel:*1010">
-                        <img src="~/mainlayout/logo/phone-call.svg" alt="" width="30"> *1010
+                    <a href="tel:+908502419342">
+                        <img src="~/mainlayout/logo/phone-call.svg" alt="" width="30"> +908502419342
                     </a>
                 </div>
                 @if (Context.Request.Cookies["UserKey"] != null)
@@ -57,18 +86,22 @@
             <!-- PHONE VERSION CONTACT -->
             <div class="row">
                 <div class="col-lg-1 col-md-6 col-xs-6 col-6 logo">
-                    <a href="/"><img src="~/mainlayout/logo/logomain.png" style="width: 65px; height: 60px;" alt="logo" width="200"></a>
+                    <a href="/"><img src="~/mainlayout/logo/logomain.png" style="width: 65px; height: 64px;" alt="logo" width="200"></a>
                 </div>
                 <div class="col-lg-9 menu-items m-auto col-md-8 col-8" style="font-size:smaller">
                     <ul>
                         <li id="btn-about-us" class="btn-about-us"><a href="#">@SharedLocalizer["About us"]<i class="fas fa-angle-down"></i> </a></li>
                         <div id="about-us-menu" class="about-us-menu">
                             <ul>
-                                <li><a style="text-transform:capitalize" asp-controller="Home" asp-action="WhoWeAre">* @SharedLocalizer["WHO WE ARE"]?</a></li>
-                                <li><a style="text-transform:capitalize" asp-controller="Home" asp-action="WhatWeDo">* @SharedLocalizer["What We Do"]?</a></li>
-                                <li><a style="text-transform:capitalize" asp-controller="Home" asp-action="OurVision">* @SharedLocalizer["Our Vision"]</a></li>
+                                <li style="text-align:left;"><a style="text-transform:uppercase" asp-controller="Home" asp-action="WhoWeAre">* @SharedLocalizer["WHO WE ARE"]?</a></li>
+                                <li style="text-align:left;"><a style="text-transform:uppercase" asp-controller="Home" asp-action="WhatWeDo">* @SharedLocalizer["WHAT WE DO"]?</a></li>
+                                <li style="text-align:left;"><a style="text-transform:uppercase" asp-controller="Home" asp-action="OurTeam">* @SharedLocalizer["Our Team"]</a></li>
+                                <li style="text-align:left;"><a style="text-transform:uppercase" asp-controller="Home" asp-action="OurVision">* @SharedLocalizer["Our Vision"]</a></li>
+                                <li style="text-align:left;"><a style="text-transform:uppercase" asp-controller="Home" asp-action="OurMission">* @SharedLocalizer["Our Mission"]</a></li>
+                                <li style="text-align:left;"><a style="text-transform:uppercase" asp-controller="Home" asp-action="OurValues">* @SharedLocalizer["Our Values"]</a></li>
                             </ul>
                         </div>
+                        <li id="btn-our-services" class="btn-our-services"><a asp-controller="Home" asp-action="Blog">@SharedLocalizer["Blog"]</a></li>
                         <li id="btn-our-services" class="btn-our-services"><a href="#">@SharedLocalizer["Our Services"]<i class="fas fa-angle-down"></i> </a></li>
                         <div id="our-services-menu" class="our-services-menu">
                             <ul>
@@ -94,7 +127,7 @@
 
                 </div>
 
-                <div class="col-lg-2 col-md-6 col-xs-6 col-6 m-auto">
+                <div class="col-lg-2 col-md-6 col-xs-6 col-6 m-auto wp-nowrap">
                     <div class="row">
                         <div class="languages col-lg-5 border-left border-right pl-4 col-8">
                             <!-- <img src="logo/world (1).svg" alt="logo" id="logo-img"> -->
@@ -102,8 +135,8 @@
                             @await Html.PartialAsync("_SelectLanguagePartial")
                         </div>
                         <div class="contact-number col-lg-7 col-md-7 col-7">
-                            <a href="tel:*1010" style="font-weight:bold eszkj,lighter">
-                                <img src="~/mainlayout/logo/phone-call.svg" alt="" width="30"> *1010
+                            <a href="tel:+908502419342" style="font-weight:bold eszkj,lighter">
+                                <img src="~/mainlayout/logo/phone-call.svg" alt="" width="30"> +90 850 241 93 42
                             </a>
                         </div>
                         <!-- HAMBURGER MENU BUTTON-->
@@ -120,15 +153,20 @@
         <!-- HAMBURGER MENU -->
         <div class="topnav">
             <div id="Mobile-Nav-Links">
-                <a href="#" id="btn-about-us-mobile">@SharedLocalizer["About Us"]<i class="fas fa-angle-down"></i> </a>
+                <a href="#" id="btn-about-us-mobile">@SharedLocalizer["About us"]<i class="fas fa-angle-down"></i> </a>
                 <div id="about-us-menu-mobile" class="about-us-menu-mobile d-none">
                     <ul>
                         <li><a asp-controller="Home" asp-action="WhoWeAre">@SharedLocalizer["WHO WE ARE"]?</a></li>
-                        <li><a asp-controller="Home" asp-action="WhatWeDo">@SharedLocalizer["What We Do"]?</a></li>
-                        <li><a asp-controller="Home" asp-action="OurVision">* @SharedLocalizer["Our Vision"]</a></li>
+                        <li><a asp-controller="Home" asp-action="WhatWeDo">@SharedLocalizer["WHAT WE DO"]?</a></li>
+                        <li><a asp-controller="Home" asp-action="OurTeam">@SharedLocalizer["Our Team"]</a></li>
+                        <li><a asp-controller="Home" asp-action="OurVision">@SharedLocalizer["Our Vision"]</a></li>
+                        <li><a asp-controller="Home" asp-action="OurMission">@SharedLocalizer["Our Mission"]</a></li>
+                        <li><a asp-controller="Home" asp-action="OurValues">@SharedLocalizer["Our Values"]</a></li>
                     </ul>
                 </div>
+                <a asp-controller="Home" asp-action="OurVision">@SharedLocalizer["VISION, MISSION, VALUES"]</a>
                 <a asp-controller="Home" asp-action="ContactUs">@SharedLocalizer["Contact us"]</a>
+                <a asp-controller="Home" asp-action="Blog">@SharedLocalizer["Blog"]</a>
                 <a href="#" id="btn-our-services-mobile">@SharedLocalizer["Our Services"]<i class="fas fa-angle-down"></i> </a>
                 <div id="our-services-menu-mobile" class="our-services-menu-mobile d-none">
                     <ul>
@@ -141,9 +179,9 @@
         <div class="first-hd" style="background-color: #dc1018 !important">
             <div class="row m-0">
                 <div class="col-lg-4 "> </div>
-                <div class="col-lg-4 col-md-6 col-xs-6 col-6 operate-div">
+                <div class="col-lg-4 col-md-6 col-xs-6 col-12 operate-div">
                     <h4 class="operate-clas">Try Us Before They Try You</h4>
-</div>
+                </div>
                 @if (Context.Request.Cookies["UserKey"] != null)
                 {
                     <form asp-controller="Actions" asp-action="OnlineTurn" method="get">
@@ -180,11 +218,10 @@
                     <hr>
                     <div class="row">
                         <div class="col-12 text-center d-flex flex-row justify-content-center">
-                            <a class="p-2" href=""><div style="border: 1px solid white; border-radius: 135px; background-color: white;"><i style="margin: 4px 7px 4px 7px; color: #dc1018; font-size: 12px;" class="fab fa-facebook-f"></i></div></a>
-                            <a class="p-2" href=""><div style="border: 1px solid white; border-radius: 135px; background-color: white;"><i style="margin: 4px 6px 4px 6px; color: #dc1018; font-size: 12px;" class="fab fa-telegram-plane"></i></div></a>
-                            <a class="p-2" href=""><div style="border: 1px solid white; border-radius: 135px; background-color: white;"><i style="margin: 4px 6px 4px 6px; color: #dc1018; font-size: 12px;" class="fab fa-instagram"></i></div></a>
-                            <a class="p-2" href=""><div style="border: 1px solid white; border-radius: 135px; background-color: white;"><i style="margin: 4px 5px 4px 5px; color: #dc1018; font-size: 12px;" class="fab fa-youtube"></i></div></a>
-                            <a class="p-2" href=""><div style="border: 1px solid white; border-radius: 135px; background-color: white;"><i style="margin: 4px 5px 4px 5px; color: #dc1018; font-size: 12px;" class="fab fa-twitter"></i></div></a>
+                            <a class="p-2" href="https://www.facebook.com/SupportCenterForForeignResidents" target="_blank"><div style="border: 1px solid white; border-radius: 135px; background-color: white;"><i style="margin: 4px 7px 4px 7px; color: #dc1018; font-size: 12px;" class="fab fa-facebook-f"></i></div></a>
+                            <a class="p-2" href="https://www.instagram.com/supportcenterforforeign/" target="_blank"><div style="border: 1px solid white; border-radius: 135px; background-color: white;"><i style="margin: 4px 6px 4px 6px; color: #dc1018; font-size: 12px;" class="fab fa-instagram"></i></div></a>
+                            <a class="p-2" href="https://www.linkedin.com/company/support-center-for-foreign-residents" target="_blank"><div style="border: 1px solid white; border-radius: 135px; background-color: white;"><i style="margin: 4px 6px 4px 6px; color: #dc1018; font-size: 12px;" class="fab fa-linkedin"></i></div></a>
+                            <a class="p-2" href="https://youtube.com/channel/UCGG9u-_Vjmo2B9wyGywnwQQ" target="_blank"><div style="border: 1px solid white; border-radius: 135px; background-color: white;"><i style="margin: 4px 5px 4px 5px; color: #dc1018; font-size: 12px;" class="fab fa-youtube"></i></div></a>
                         </div>
                         <div class="col-12 text-center">
                             <p style="color:white">
@@ -202,8 +239,30 @@
             $(".lng").change(function () {
                 $("#lngform").submit();
             })
+
+            $("#services-img").click(() => {
+                $("#servicesImgModal").modal("show");
+            })
         })
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sharer.js@latest/sharer.min.js"></script>
+    <div id="fb-root"></div>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v10.0&appId=462710661481080&autoLogAppEvents=1" nonce="KFqHVpxZ"></script>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/60929d22185beb22b30a47aa/1f4ubbk7n';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
     @RenderSection("Scripts", required: false)
 </body>
 

@@ -15,8 +15,5 @@ namespace TCYDMWebServices.Models
         public string Name { get; set; }
         public int LanguageId { get; set; }
         public List<User> Users { get; set; }
-        public Country Country { get; set; }
-        [ForeignKey("Country")]
-        public int CountryId { get; set; }
     }
 }

@@ -3,7 +3,6 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
-
   <ItemGroup>
     <Content Include="wwwroot\AdminPanel\vendors\parsleyjs\bower_components\bootstrap\bower.json" />
     <Content Include="wwwroot\AdminPanel\vendors\parsleyjs\bower_components\bootstrap\dist\css\bootstrap-theme.css" />

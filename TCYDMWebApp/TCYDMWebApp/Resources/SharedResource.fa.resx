@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About us" xml:space="preserve">
+    <value>درباره ما</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>نشانی</value>
+  </data>
+  <data name="Adress" xml:space="preserve">
+    <value>آدرس</value>
+  </data>
+  <data name="All rights reserved" xml:space="preserve">
+    <value>کلیه حقوق محفوظ است</value>
+  </data>
+  <data name="Blog" xml:space="preserve">
+    <value>وبلاگ</value>
+  </data>
+  <data name="Cannot find this type of data" xml:space="preserve">
+    <value>چنین داده هایی را نمی توان یافت</value>
+  </data>
+  <data name="Change Password" xml:space="preserve">
+    <value>رمز عبور را تغییر دهید</value>
+  </data>
+  <data name="Change Profile" xml:space="preserve">
+    <value>مشخصات را تغییر دهید</value>
+  </data>
+  <data name="Comment" xml:space="preserve">
+    <value>نظرات</value>
+  </data>
+  <data name="Confirm Password" xml:space="preserve">
+    <value>رمز ورود را تأیید کنید</value>
+  </data>
+  <data name="Confirmation needed" xml:space="preserve">
+    <value>تأیید لازم است</value>
+  </data>
+  <data name="Contact us" xml:space="preserve">
+    <value>با ما تماس بگیرید</value>
+  </data>
+  <data name="Country is required" xml:space="preserve">
+    <value>کشور لازم است</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>ایمیل</value>
+  </data>
+  <data name="Email is required" xml:space="preserve">
+    <value>ایمیل لازم است</value>
+  </data>
+  <data name="Email must be a valid email" xml:space="preserve">
+    <value>ایمیل باید یک ایمیل معتبر باشد</value>
+  </data>
+  <data name="Email or Phone number max length must be 100" xml:space="preserve">
+    <value>طول ایمیل یا شماره تلفن باید حداکثر 100 باشد</value>
+  </data>
+  <data name="Email sended" xml:space="preserve">
+    <value>ایمیل ارسال شد</value>
+  </data>
+  <data name="Forgot Password" xml:space="preserve">
+    <value>رمز عبور را فراموش کرده اید؟</value>
+  </data>
+  <data name="Gender is required" xml:space="preserve">
+    <value>جنسیت لازم است</value>
+  </data>
+  <data name="Get Turn" xml:space="preserve">
+    <value>برگرد</value>
+  </data>
+  <data name="Landline" xml:space="preserve">
+    <value>تلفن ثابت</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>ورود</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>خروج</value>
+  </data>
+  <data name="Max lenght is 256" xml:space="preserve">
+    <value>حداکثر طول ۲۵۶ است</value>
+  </data>
+  <data name="Max lenght limit is 200" xml:space="preserve">
+    <value>حداکثر حد طول 200 است</value>
+  </data>
+  <data name="Minimum password lenght must be 6 characters" xml:space="preserve">
+    <value>حداقل طول رمز عبور باید 6 کاراکتر باشد</value>
+  </data>
+  <data name="Mobile" xml:space="preserve">
+    <value>شماره تلفن همراه</value>
+  </data>
+  <data name="Mobile Phone" xml:space="preserve">
+    <value>همراه</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="Name is required" xml:space="preserve">
+    <value>نام الزامی است</value>
+  </data>
+  <data name="Online query" xml:space="preserve">
+    <value>جستجوی آنلاین</value>
+  </data>
+  <data name="Our Mission" xml:space="preserve">
+    <value>ماموریت</value>
+  </data>
+  <data name="Our Services" xml:space="preserve">
+    <value>خدمات ما</value>
+  </data>
+  <data name="Our Team" xml:space="preserve">
+    <value>تیم ما</value>
+  </data>
+  <data name="Our Values" xml:space="preserve">
+    <value>ارزش ها</value>
+  </data>
+  <data name="Our Vision" xml:space="preserve">
+    <value>چشم انداز</value>
+  </data>
+  <data name="Page is not found" xml:space="preserve">
+    <value>صفحه یافت نشد</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>رمز عبور</value>
+  </data>
+  <data name="Password is required" xml:space="preserve">
+    <value>رمز عبور لازم است</value>
+  </data>
+  <data name="Password is wrong" xml:space="preserve">
+    <value>رمز عبور اشتباه است</value>
+  </data>
+  <data name="Passwords are not match" xml:space="preserve">
+    <value>رمزهای ورود مطابقت ندارند</value>
+  </data>
+  <data name="Personal ID" xml:space="preserve">
+    <value>شماره شناسایی</value>
+  </data>
+  <data name="Personal Info" xml:space="preserve">
+    <value>اطلاعات شخصی</value>
+  </data>
+  <data name="Phone number" xml:space="preserve">
+    <value>شماره تلفن </value>
+  </data>
+  <data name="Phone number is required" xml:space="preserve">
+    <value>شماره تلفن الزامی است</value>
+  </data>
+  <data name="Phone number must be a valid number" xml:space="preserve">
+    <value>شماره تلفن باید یک شماره معتبر باشد</value>
+  </data>
+  <data name="Please confirm your email adress" xml:space="preserve">
+    <value>لطفا آدرس ایمیل خود را تایید کنید</value>
+  </data>
+  <data name="Please select required files" xml:space="preserve">
+    <value>لطفا پرونده های مورد نیاز را انتخاب کنید</value>
+  </data>
+  <data name="Please select service" xml:space="preserve">
+    <value>لطفا یک سرویس را انتخاب کنید</value>
+  </data>
+  <data name="Please select service attend date" xml:space="preserve">
+    <value>لطفاً تاریخ پیوستن سرویس را انتخاب کنید</value>
+  </data>
+  <data name="Please select service attend time" xml:space="preserve">
+    <value>لطفا زمان حضور در خدمات را انتخاب کنید</value>
+  </data>
+  <data name="Please select valid hour" xml:space="preserve">
+    <value>لطفا زمان معتبری را انتخاب کنید</value>
+  </data>
+  <data name="Please send all required files, because if files not send operation will be not succeeded." xml:space="preserve">
+    <value>لطفاً تمام پرونده های لازم را ارسال کنید، زیرا در صورت ارسال نشدن پرونده ها، عملیات موفق نخواهد شد.</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>مشخصات</value>
+  </data>
+  <data name="Real estate services" xml:space="preserve">
+    <value>خدمات املاک </value>
+  </data>
+  <data name="Region is required" xml:space="preserve">
+    <value>منطقه الزامی است</value>
+  </data>
+  <data name="Registrate" xml:space="preserve">
+    <value>ثبت نام</value>
+  </data>
+  <data name="Registration" xml:space="preserve">
+    <value>ذخیره </value>
+  </data>
+  <data name="Remember me" xml:space="preserve">
+    <value>مرا به خاطر بسپار</value>
+  </data>
+  <data name="Restore" xml:space="preserve">
+    <value>تازه کردن</value>
+  </data>
+  <data name="Restore Password" xml:space="preserve">
+    <value>تازه کردن رمز عبور</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>ذخیره کن</value>
+  </data>
+  <data name="Select birth year" xml:space="preserve">
+    <value>انتخاب تاریخ تولد </value>
+  </data>
+  <data name="Select Country" xml:space="preserve">
+    <value>انتخاب کشور</value>
+  </data>
+  <data name="Select Date" xml:space="preserve">
+    <value>انتخاب تاریخ</value>
+  </data>
+  <data name="Select Gender" xml:space="preserve">
+    <value>انتخاب جنسیت</value>
+  </data>
+  <data name="Select Region" xml:space="preserve">
+    <value>انتخاب منطقه</value>
+  </data>
+  <data name="Select Service" xml:space="preserve">
+    <value>انتخاب سرویس</value>
+  </data>
+  <data name="Select Time" xml:space="preserve">
+    <value>ساعت را انتخاب کنید</value>
+  </data>
+  <data name="Service" xml:space="preserve">
+    <value>خدمت</value>
+  </data>
+  <data name="Sign in" xml:space="preserve">
+    <value>ورود</value>
+  </data>
+  <data name="Support to the Republic of Turkey Foreign Center" xml:space="preserve">
+    <value>پشتیبانی از مرکز خارجی جمهوری ترکیه</value>
+  </data>
+  <data name="Surname" xml:space="preserve">
+    <value>نام خانوادگی</value>
+  </data>
+  <data name="Surname is required" xml:space="preserve">
+    <value>نام خانوادگی الزامی است</value>
+  </data>
+  <data name="There is no such user with this credentials" xml:space="preserve">
+    <value>هیچ کاربر با این اعتبار وجود دارد</value>
+  </data>
+  <data name="There is problem with server, please try again" xml:space="preserve">
+    <value>مشکلی با سرور وجود دارد ، لطفا دوباره سعی کنید</value>
+  </data>
+  <data name="There is problem with server, try again later" xml:space="preserve">
+    <value>مشکلی در سرور وجود دارد ، بعداً دوباره امتحان کنید</value>
+  </data>
+  <data name="This credentials are already exists, please try another one" xml:space="preserve">
+    <value>این مدارک از قبل موجود است ، لطفاً یکی دیگر را امتحان کنید</value>
+  </data>
+  <data name="This field is required." xml:space="preserve">
+    <value>این قسمت الزامی است</value>
+  </data>
+  <data name="This time has taken by other user, please change time or date" xml:space="preserve">
+    <value>این دوره توسط کاربر دیگری دریافت شد، لطفا زمان یا تاریخ را تغییر دهید</value>
+  </data>
+  <data name="Understood" xml:space="preserve">
+    <value>متوجه شدم</value>
+  </data>
+  <data name="WE OPERATE 24/7" xml:space="preserve">
+    <value>خدمات رسانی 24 ساعته</value>
+  </data>
+  <data name="We send confirmation email to your email adress, please confirm it is actually your email.After confirmation you can access your account" xml:space="preserve">
+    <value>ما در حال ارسال یک ایمیل تأیید به آدرس ایمیل شما هستیم ، لطفاً تأیید کنید که این در واقع ایمیل شماست پس از تأیید ، می توانید به حساب خود دسترسی پیدا کنید.</value>
+  </data>
+  <data name="We send password restore link to your email, please check your email adress" xml:space="preserve">
+    <value>ما یک لینک بازیابی رمز عبور به ایمیل شما ارسال می کنیم، لطفا آدرس ایمیل خود را بررسی کنید</value>
+  </data>
+  <data name="WHAT WE DO" xml:space="preserve">
+    <value>چه کاری  میکنیم؟</value>
+  </data>
+  <data name="WHO WE ARE" xml:space="preserve">
+    <value>ما کی هستیم؟</value>
+  </data>
+  <data name="Wrong credentials" xml:space="preserve">
+    <value>شماره شناسه ی نا معتبر</value>
+  </data>
+  <data name="Year of birth is required" xml:space="preserve">
+    <value>تاریخ تولد اجباری است</value>
+  </data>
+  <data name="You have already unfinished query. Please wait until it will be finished. You will receive email when query finish" xml:space="preserve">
+    <value>شما در حال حاضر یک پرس و جو ناتمام دارید/  لطفا تا زمان اتمام صبر کنید.  زمانی که پرس و جو به پایان رسید شما یک ایمیل دریافت خواهید کرد</value>
+  </data>
+  <data name="You must type Email or Password" xml:space="preserve">
+    <value>شما باید ایمیل یا رمز عبور را بنویسید</value>
+  </data>
+  <data name="Your Email or Phone number" xml:space="preserve">
+    <value>آدرس پست الکترونیکی یا شماره تلفن شما</value>
+  </data>
+  <data name="Your Password Successfully Changed" xml:space="preserve">
+    <value>گذرواژه ی شما با موفقیت تغییر کرد</value>
+  </data>
+</root>

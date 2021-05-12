@@ -16,18 +16,28 @@
             <div class="phone-number-email">
                 <img src="~/homelayout/logo/phone.svg" alt="">
                 <div class="address-map">
-                    <p>@SharedLocalizer["Mobile"]</p>
-                    <a href="tel:@Model?.Phone">@Model?.Phone</a>
+                    <p>@SharedLocalizer["Mobile Phone"] </p>
+                    @if (Model != null)
+                    {
+                        <a href="tel:@Model.Phone"> <i class="fab fa-whatsapp ml-2"></i> <i class="fa fa-phone float-left"></i> @Model.Phone</a>
+                    }
+                </div>
+                <div style="margin-top:0px;" class="address-map">
+                    <p>@SharedLocalizer["Landline"] </p>
+                    @if (Model != null)
+                    {
+                        <a href="tel:@Model.LandLine"> <i class="fa fa-phone float-left"></i> @Model.LandLine</a>
+                    }
                 </div>
             </div>
             <hr class="d-none showhr">
         </div>
         <div class="col-lg-4 col-md-12">
-            <div class="phone-number-email">
+            <div class="phone-number-email" style="height: 106.67px;">
                 <img src="~/homelayout/logo/email.svg" alt="">
                 <div class="address-map">
                     <p>@SharedLocalizer["Email"]</p>
-                    <a href="mailto:@Model?.Email">@Model?.Email</a>
+                    <a href="mailto:@Model?.Email"> <i class="fa fa-envelope float-left mr-2"></i> @Model?.Email</a>
                 </div>
             </div>
             <hr class="d-none showhr">
@@ -36,7 +46,7 @@
             <div class="map">
                 <img src="~/homelayout/logo/email.svg" alt="">
                 <div class="address-map">
-                    <p>@SharedLocalizer["Adress"]</p>
+                    <p>@SharedLocalizer["Address"]</p>
                     <a href="http://maps.google.com/?q=@Model?.Adress">
                         @Model?.Adress
                     </a>
@@ -45,8 +55,44 @@
             <hr class="d-none showhr">
         </div>
     </div>
-    <h4 style="color:#212529">@SharedLocalizer["Contact us"]</h4>
-    <div class="contact-text">
-        @Html.Raw(Model?.Content)
+    <div class="row">
+        <div class="contact-text col-lg-4 col-12">
+            <div class="row">
+                <div class="text-end mb-2 col-12">
+                    <a target="_blank" href="https://www.facebook.com/SupportCenterForForeignResidents">
+                        <i class="fab fa-facebook-square icon-fb-contact"></i>
+                        <span class="text-contact">SupportCenterForForeignResidents</span>
+                    </a>
+                </div>
+                <div class="text-end mb-2 col-12">
+                    <a target="_blank" href="https://www.instagram.com/supportcenterforforeign/">
+                        <img class="icon-instagram-contact" src="~/mainlayout/img/free-icon-instagram-1409946.svg" alt="instagram icon" />
+                        <span class="text-contact">SupportCenterForForeign</span>
+                    </a>
+                </div>
+                <div class="text-end mb-2 col-12">
+                    <a target="_blank" href="https://www.linkedin.com/company/support-center-for-foreign-residents">
+                        <i class="fab fa-linkedin icon-in-contact"></i>
+                        <span class="text-contact">Support Center For Foreign Residents</span>
+                    </a>
+                </div>
+                <div class="text-end mb-2 col-12">
+                    <a target="_blank" href="https://youtube.com/channel/UCGG9u-_Vjmo2B9wyGywnwQQ">
+                        <i class="fab fa-youtube icon-youtube-contact"></i>
+                        <span class="text-contact">SupportCenter</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="contact-text col-lg-4 col-12">
+            @Html.Raw(Model?.Content)
+        </div>
+        <div class="col-lg-4 col-12">
+            <div class="mapouter">
+                <div class="gmap_canvas">
+                    <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=41.01605224609375,28.642330169677734&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

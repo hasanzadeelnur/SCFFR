@@ -13,6 +13,8 @@ namespace TCYDMWebApp.DTO
         [Required]
         public string Phone { get; set; }
         [Required]
+        public string LandLine { get; set; }
+        [Required]
         [EmailAddress]
         public string Email { get; set; }
         [Required]
