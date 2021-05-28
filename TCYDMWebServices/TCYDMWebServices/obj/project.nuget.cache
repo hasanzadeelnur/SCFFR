@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lIByvsFMhSodMR+BsF1iIET6RF/H8fZcZrnahcnvjNOaHwlCnVRdwFzr+vAUPAVLDJ1lAwpyifKA7NU8+qL9mA==",
+  "dgSpecHash": "cOix7YPD352pH85MicgGUtlPpdgr9CTzM1tAABC3Wfc8q9W9glWIDIrerGOD9YtTWJqxMyy9sgM2W8Auqt2AXg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hasan\\Desktop\\New folder (2)\\SCFFR\\TCYDMWebServices\\TCYDMWebServices\\TCYDMWebServices.csproj",
+  "projectFilePath": "C:\\Users\\hasan\\Desktop\\SCFFR-master\\TCYDMWebServices\\TCYDMWebServices\\TCYDMWebServices.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hasan\\.nuget\\packages\\cryptohelper\\3.0.2\\cryptohelper.3.0.2.nupkg.sha512",
     "C:\\Users\\hasan\\.nuget\\packages\\microsoft.aspnetcore\\2.1.7\\microsoft.aspnetcore.2.1.7.nupkg.sha512",

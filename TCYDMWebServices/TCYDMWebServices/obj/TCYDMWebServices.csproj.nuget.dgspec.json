@@ -1,21 +1,18 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hasan\\Desktop\\New folder (2)\\SCFFR\\TCYDMWebServices\\TCYDMWebServices\\TCYDMWebServices.csproj": {}
+    "C:\\Users\\hasan\\Desktop\\SCFFR-master\\TCYDMWebServices\\TCYDMWebServices\\TCYDMWebServices.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hasan\\Desktop\\New folder (2)\\SCFFR\\TCYDMWebServices\\TCYDMWebServices\\TCYDMWebServices.csproj": {
+    "C:\\Users\\hasan\\Desktop\\SCFFR-master\\TCYDMWebServices\\TCYDMWebServices\\TCYDMWebServices.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hasan\\Desktop\\New folder (2)\\SCFFR\\TCYDMWebServices\\TCYDMWebServices\\TCYDMWebServices.csproj",
+        "projectUniqueName": "C:\\Users\\hasan\\Desktop\\SCFFR-master\\TCYDMWebServices\\TCYDMWebServices\\TCYDMWebServices.csproj",
         "projectName": "TCYDMWebServices",
-        "projectPath": "C:\\Users\\hasan\\Desktop\\New folder (2)\\SCFFR\\TCYDMWebServices\\TCYDMWebServices\\TCYDMWebServices.csproj",
+        "projectPath": "C:\\Users\\hasan\\Desktop\\SCFFR-master\\TCYDMWebServices\\TCYDMWebServices\\TCYDMWebServices.csproj",
         "packagesPath": "C:\\Users\\hasan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hasan\\Desktop\\New folder (2)\\SCFFR\\TCYDMWebServices\\TCYDMWebServices\\obj\\",
+        "outputPath": "C:\\Users\\hasan\\Desktop\\SCFFR-master\\TCYDMWebServices\\TCYDMWebServices\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
           "C:\\Users\\hasan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -104,7 +101,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

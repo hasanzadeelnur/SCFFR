@@ -69,18 +69,16 @@
                 </div>
                 @if (Context.Request.Cookies["UserKey"] != null)
                 {
-                    <div class="col-6 col-xs-6 text-right m-auto">
-                        <a asp-controller="Users" asp-action="UserEdit" class="btn-register" style="text-transform:capitalize"><img src="~/mainlayout/logo/user-line.png" alt="logo">@Context.Request.Cookies["name"]</a>
-                        <a asp-controller="Users" asp-action="Logout"><img src="~/mainlayout/logo/exit.svg" alt="logo"></a>
-                    </div>
-                }
-                else
-                {
-                    <div class="col-6 col-xs-6 text-right m-auto">
-                        <a asp-action="Login" asp-controller="Users" class="btn-register">@SharedLocalizer["Registration"]</a>
+    <div class="col-6 col-xs-6 text-right m-auto">
+        <a asp-controller="Users" asp-action="UserEdit" class="btn-register" style="text-transform:capitalize"><img src="~/mainlayout/logo/user-line.png" alt="logo">@Context.Request.Cookies["name"]</a>
+        <a asp-controller="Users" asp-action="Logout"><img src="~/mainlayout/logo/exit.svg" alt="logo"></a>
+    </div> }
+else
+{
+<div class="col-6 col-xs-6 text-right m-auto">
+    <a asp-action="Login" asp-controller="Users" class="btn-register">@SharedLocalizer["Registration"]</a>
 
-                    </div>
-                }
+</div>}
 
             </div>
             <!-- PHONE VERSION CONTACT -->
@@ -112,13 +110,13 @@
                         <li><a asp-controller="Home" asp-action="ContactUs" style="text-transform:uppercase">@SharedLocalizer["Contact us"]</a></li>
                         @if (Context.Request.Cookies["UserKey"] != null)
                         {
-                            <li> <a asp-controller="Users" asp-action="UserEdit" class="btn-register" style="text-transform:capitalize"><img src="~/mainlayout/logo/user-line.png" alt="logo">@Context.Request.Cookies["name"]</a></li>
+            <li> <a asp-controller="Users" asp-action="UserEdit" class="btn-register" style="text-transform:capitalize"><img src="~/mainlayout/logo/user-line.png" alt="logo">@Context.Request.Cookies["name"]</a></li>
                             <li> <a asp-controller="Users" asp-action="Logout"><img src="~/mainlayout/logo/exit.svg" alt="logo"></a></li>
-                        }
+ }
                         else
                         {
-                            <li><a asp-action="Login" asp-controller="Users" class="btn-register">@SharedLocalizer["Registration"]</a></li>
-                        }
+            <li><a asp-action="Login" asp-controller="Users" class="btn-register">@SharedLocalizer["Registration"]</a></li>
+}
 
                     </ul>
 
@@ -184,12 +182,11 @@
                 </div>
                 @if (Context.Request.Cookies["UserKey"] != null)
                 {
-                    <form asp-controller="Actions" asp-action="OnlineTurn" method="get">
-                        <div class="col-lg-3 col-md-6 col-xs-6 col-6 right-div">
-                            <button type="submit" class="online-btn">@SharedLocalizer["Online query"]</button>
-                        </div>
-                    </form>
-                }
+    <form asp-controller="Actions" asp-action="OnlineTurn" method="get">
+        <div class="col-lg-3 col-md-6 col-xs-6 col-6 right-div">
+            <button type="submit" class="online-btn">@SharedLocalizer["Online query"]</button>
+        </div>
+    </form>}
             </div>
 
 
@@ -219,7 +216,7 @@
                     <div class="row">
                         <div class="col-12 text-center d-flex flex-row justify-content-center">
                             <a class="p-2" href="https://www.facebook.com/SupportCenterForForeignResidents" target="_blank"><div style="border: 1px solid white; border-radius: 135px; background-color: white;"><i style="margin: 4px 7px 4px 7px; color: #dc1018; font-size: 12px;" class="fab fa-facebook-f"></i></div></a>
-                            <a class="p-2" href="https://www.instagram.com/supportcenterforforeign/" target="_blank"><div style="border: 1px solid white; border-radius: 135px; background-color: white;"><i style="margin: 4px 6px 4px 6px; color: #dc1018; font-size: 12px;" class="fab fa-instagram"></i></div></a>
+                            <a class="p-2" href="https://www.instagram.com/turkiye_yabanci_destek_merkezi/" target="_blank"><div style="border: 1px solid white; border-radius: 135px; background-color: white;"><i style="margin: 4px 6px 4px 6px; color: #dc1018; font-size: 12px;" class="fab fa-instagram"></i></div></a>
                             <a class="p-2" href="https://www.linkedin.com/company/support-center-for-foreign-residents" target="_blank"><div style="border: 1px solid white; border-radius: 135px; background-color: white;"><i style="margin: 4px 6px 4px 6px; color: #dc1018; font-size: 12px;" class="fab fa-linkedin"></i></div></a>
                             <a class="p-2" href="https://youtube.com/channel/UCGG9u-_Vjmo2B9wyGywnwQQ" target="_blank"><div style="border: 1px solid white; border-radius: 135px; background-color: white;"><i style="margin: 4px 5px 4px 5px; color: #dc1018; font-size: 12px;" class="fab fa-youtube"></i></div></a>
                         </div>
@@ -250,19 +247,53 @@
     <div id="fb-root"></div>
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v10.0&appId=462710661481080&autoLogAppEvents=1" nonce="KFqHVpxZ"></script>
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-        (function () {
-            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = 'https://embed.tawk.to/60929d22185beb22b30a47aa/1f4ubbk7n';
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin', '*');
-            s0.parentNode.insertBefore(s1, s0);
-        })();
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '468686337757736');
+        fbq('track', 'PageView');
     </script>
-    <!--End of Tawk.to Script-->
+    <!-- Messenger Sohbet Eklentisi Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Sohbet Eklentisi code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "105518741677622");
+        chatbox.setAttribute("attribution", "biz_inbox");
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v10.0'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+             src="https://www.facebook.com/tr?id=468686337757736&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
     @RenderSection("Scripts", required: false)
 </body>
 
